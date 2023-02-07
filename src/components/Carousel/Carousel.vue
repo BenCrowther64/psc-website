@@ -1,11 +1,13 @@
 <script>
 import CarouselItem from './CarouselItem.vue';
+import CarouselControls from './CarouselControls.vue';
 
 export default {
     data() {
         return {
             currentSlide: 0,
-            slideInterval: null
+            slideInterval: null,
+            direction: "right"
         }
     },
     props:{
@@ -17,19 +19,42 @@ export default {
     methods: {
         setCurrentSlide(index) {
             this.currentSlide = index;
-        }
+        },
+        prev (){
+            const index = this.currentSlide < this.images.length - 1 ? this.currentSlide + 1 : 0;
+            this.setCurrentSlide(index);
+            this.direction = "left";
+            this.startSlideTimer();
+        },
+        _next () {
+            const index = this.currentSlide > 0 ? this.currentSlide - 1 : this.images.length - 1;
+            this.setCurrentSlide(index);
+            this.direction = "right";
+            this.startSlideTimer();
+        },
+        next() {
+            this._next();
+            this.startSlideTimer();
+        },
+        startSlideTimer() {
+            this.stopSlideTimer();
+            this.slideInterval = setInterval(() => {
+                this._next();
+            }, 5000);
+        },
+        stopSlideTimer() {
+            clearInterval(this.slideInterval);
+        },
     },
     mounted() {
-        this.slideInterval = setInterval(() => {
-            const index = this.currentSlide < this.images.length -1 ? this.currentSlide + 1 : 0;
-            this.setCurrentSlide(index);
-        }, 3000);
+        this.startSlideTimer();
     },
     beforeUnmount() {
-        clearInterval(this.slideInterval);
+        this.stopSlideTimer();
     },
     components: {
-        CarouselItem
+        CarouselItem,
+        CarouselControls
     }
 };
 </script>
@@ -44,22 +69,15 @@ export default {
                 :key="'item-${index}'"
                 :currentImage="currentSlide"
                 :index="index"
+                :direction="direction"
             />
+            <carousel-controls @prev='prev' @next='next'/>
         </div>
     </div>
 </template>
 
 
-<style>
-    @keyframes zoominoutsinglefeatured {
-        0% {
-            transform: scale(1,1);
-        }
-        50% {
-            transform: scale(1.1,1.1);
-        }
-    }   
-
+<style scoped>
     .carousel {
         display: flex;
         justify-content: center;
@@ -71,6 +89,5 @@ export default {
         height: 100vh;
         max-width: 100%;
         overflow: hidden;
-        animation: zoominoutsinglefeatured 6s infinite;
     }
 </style>
