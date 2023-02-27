@@ -13,7 +13,7 @@
             <router-link to="/Quantity-Surveying">QUANTITY SURVEYING</router-link>
             <router-link to="/Building-Surveying">BUILDING SURVEYING</router-link>
             <router-link to="/Project-Management">PROJECT MANAGEMENT</router-link>
-            <router-link to="/Principle-Designer">PRINCIPLE DESIGNER</router-link>
+            <router-link to="/Principal-Designer">PRINCIPAL DESIGNER</router-link>
             <router-link to="/Projects">PROJECTS</router-link>
             <router-link to="/Contact">CONTACT</router-link>
         </div>
@@ -56,10 +56,10 @@
 
 .nav-screen-button{
     position: absolute;
-    top: 1%;
-    right: 1%;
-    width: 50px;
-    height: 50px;
+    top: 2%;
+    right: 1.5%;
+    width: 30px;
+    height: 30px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: #f3f3f3;

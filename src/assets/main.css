@@ -1,5 +1,10 @@
 @import './base.css';
 
+hr.solid{
+  color: var(--psc-light-gray);
+  opacity: 50%;
+}
+
 #app {
   min-height: 100vh;
   font-weight: normal;
@@ -16,4 +21,21 @@ a,
   a:hover {
     background-color: rgb(37, 46, 95);
   }
+}
+
+/*width*/
+body::-webkit-scrollbar {
+  width:6px;
+}
+
+/*track*/
+body::-webkit-scrollbar-track {
+  background:var(--psc-light-gray);
+}
+
+/*thumb*/
+body::-webkit-scrollbar-thumb {
+  border-color: var(--psc-dark-blue);
+  border-style:solid;
+  border-radius:10px;
 }
