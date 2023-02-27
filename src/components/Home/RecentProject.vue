@@ -1,5 +1,5 @@
 <template>
-    <div @mouseover="hover = true" @mouseleave="hover = false"  class="project-container">
+    <div @mouseover="hover = true" @mouseleave="hover = false" :class="[isLong ? 'long-project-container' : 'project-container']">
         <img :src="image">
         <Transition>
             <div v-if="hover" class="text-container">
@@ -11,12 +11,17 @@
 
 <script>
     export default{
-        props: ["image", "projectName"],
+        props: {
+            image: String,
+            projectName: String,
+            isLong: Boolean
+        },
         data() {
             return {
-                hover: false
+                hover: false,
             }
         }
+
     }
 </script>
 
@@ -26,9 +31,28 @@
     width: 26.5%;
     height: 500px;
     margin-bottom: 1%;
+    object-fit: cover;
+}
+.project-container:hover{
+    cursor: pointer;
+}
+.project-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.project-container img{
+.long-project-container{
+    position: relative;
+    width: 45%;
+    height: 500px;
+    margin-bottom: 1%;
+    object-fit: cover;
+}
+.long-project-container:hover{
+    cursor: pointer;
+}
+.long-project-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;

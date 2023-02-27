@@ -5,7 +5,7 @@
         About PSC Surveying Ltd.
       </b>
       <p>
-        Based in Leeds since 2011 we work thoughout the United Kingdom in a variety
+        Based in Leeds since 2011, we work thoughout the United Kingdom in a variety
         of sectors including heritage, commercial, retail, leisure, offices, education 
         and residential.
       </p>

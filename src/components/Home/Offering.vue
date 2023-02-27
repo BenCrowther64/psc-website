@@ -24,6 +24,10 @@ export default {
     flex-direction: column;
 }
 
+.offering-header:hover{
+    cursor: pointer;
+}
+
 .text-wrapper {
     display: flex;
     flex-direction: column;
@@ -56,7 +60,7 @@ export default {
 }
 
 .text-wrapper:hover{
-    transform: translate(0, -5px);
+    transform: translate(0, -8px);
 }
 
 .text-wrapper:hover img{

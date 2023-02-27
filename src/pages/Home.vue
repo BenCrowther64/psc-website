@@ -4,7 +4,6 @@ import BottomFooter from '../components/Footer.vue';
 import NavScreen from '../components/NavScreen.vue';
 import Offering from '../components/Home/Offering.vue';
 import RecentProject from '../components/Home/RecentProject.vue';
-import WideRecentProject from '../components/Home/WideRecentProject.vue';
 
 import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
@@ -38,7 +37,6 @@ export default {
     BottomFooter,
     NavScreen,
     RecentProject,
-    WideRecentProject,
   },
 }
 </script>
@@ -98,30 +96,35 @@ export default {
         <h1>RECENT PROJECTS...</h1>
         <p>Some recent projects worked on by PSC Surveying Ltd.</p>
         <div class = "projects-wrapper">
-          <WideRecentProject
+          <RecentProject
             :image="OfferingImage1"
             projectName="EXAMPLE PROJECT NAME"
+            :isLong="true"
           />
           <RecentProject
             :image="OfferingImage1"
             projectName="EXAMPLE PROJECT NAME"
+            :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
             projectName="EXAMPLE PROJECT NAME"
-            long="false"
+            :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
             projectName="EXAMPLE PROJECT NAME"
+            :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
             projectName="EXAMPLE PROJECT NAME"
+            :isLong="false"
           />
-          <WideRecentProject
+          <RecentProject
             :image="OfferingImage1"
             projectName="EXAMPLE PROJECT NAME"
+            :isLong="true"
           />
         </div>  
     </section>
