@@ -1,7 +1,9 @@
 <template>
     <div class="offering-header">
         <div class="text-wrapper">
-            <img :src="image">
+            <div class = "image-container">
+                <img :src="image">
+            </div>
             <h1>{{ title }}</h1>
             <p>{{ text }}</p>
         </div>
@@ -27,12 +29,8 @@ export default {
     flex-direction: column;
     justify-content: left;
     text-align: left;
-}
-
-.text-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    transition: all .3s ease;
+    vertical-align: middle;
 }
 
 .text-wrapper h1 {
@@ -42,7 +40,27 @@ export default {
 }
 
 .text-wrapper p {
+    font-size: 15px;
     margin: 0px;;
+}
+
+.image-container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-wrapper:hover{
+    transform: translate(0, -5px);
+}
+
+.text-wrapper:hover img{
+    transform: scale(1.05,1.05);
 }
 
 </style>

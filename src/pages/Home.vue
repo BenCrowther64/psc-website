@@ -4,6 +4,7 @@ import BottomFooter from '../components/Footer.vue';
 import NavScreen from '../components/NavScreen.vue';
 import Offering from '../components/Home/Offering.vue';
 import RecentProject from '../components/Home/RecentProject.vue';
+import WideRecentProject from '../components/Home/WideRecentProject.vue';
 
 import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
@@ -37,6 +38,7 @@ export default {
     BottomFooter,
     NavScreen,
     RecentProject,
+    WideRecentProject,
   },
 }
 </script>
@@ -66,25 +68,25 @@ export default {
     <section class="offerings">
       <div class="offerings-wrapper">
         <Offering
-          title="Quantity Surevying"
+          title="QUANTITY SURVEYING"
           text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
           link="/Quantity-Surveying"
           :image="OfferingImage1"
         />
         <Offering
-          title="Project Management"
+          title="PROJECT MANAGEMENT"
           text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
           link="/Project-Management"
           :image="OfferingImage1"
         />
         <Offering
-          title="Building Surveying"
+          title="BUILDING SURVEYING"
           text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
           link="/Building-Surveying"
           :image="OfferingImage1"
         />
         <Offering
-          title="Principal Designer"
+          title="PRINCIPAL DESIGNER"
           text="We are a corporate member of the Association of Project Safety and work closey with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
           link="/Principal-Designer"
           :image="OfferingImage1"
@@ -93,12 +95,35 @@ export default {
     </section>
     
     <section class="recent-projects">
-      <h1>Recent Projects</h1>
-      <RecentProject
-        :image="OfferingImage1"
-        projectName="EXAMPLE PROJECT NAME"
-        projectDescription="EXAMPLE PROJECT DESCRIPTION"
-      />
+        <h1>RECENT PROJECTS...</h1>
+        <p>Some recent projects worked on by PSC Surveying Ltd.</p>
+        <div class = "projects-wrapper">
+          <WideRecentProject
+            :image="OfferingImage1"
+            projectName="EXAMPLE PROJECT NAME"
+          />
+          <RecentProject
+            :image="OfferingImage1"
+            projectName="EXAMPLE PROJECT NAME"
+          />
+          <RecentProject
+            :image="OfferingImage1"
+            projectName="EXAMPLE PROJECT NAME"
+            long="false"
+          />
+          <RecentProject
+            :image="OfferingImage1"
+            projectName="EXAMPLE PROJECT NAME"
+          />
+          <RecentProject
+            :image="OfferingImage1"
+            projectName="EXAMPLE PROJECT NAME"
+          />
+          <WideRecentProject
+            :image="OfferingImage1"
+            projectName="EXAMPLE PROJECT NAME"
+          />
+        </div>  
     </section>
 
     <section class="contact">
@@ -185,7 +210,7 @@ export default {
   justify-content: center;
 }
 .contact-wrapper{
-  margin: 1% 1%;
+  margin: 0% 1% 1% 1%;
   background-color: #f1f1f1;
   display: flex;
   width: 100%;
@@ -223,12 +248,25 @@ export default {
 }
 
 .recent-projects{
-  margin: 3% 1% 1% 1%;
+  margin: 2% 1% 0% 1%;
+}
+
+.recent-projects p{
+  margin: 5px 0px;
+  font-size: 15px;
 }
 
 .recent-projects h1{
   color:var(--psc-dark-blue);
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+.projects-wrapper{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: space-evenly;
 }
 </style>

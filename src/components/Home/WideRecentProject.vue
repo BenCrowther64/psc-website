@@ -23,7 +23,7 @@
 <style scoped>
 .project-container{
     position: relative;
-    width: 26.5%;
+    width: 45%;
     height: 500px;
     margin-bottom: 1%;
 }
