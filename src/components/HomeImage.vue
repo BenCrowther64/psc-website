@@ -12,7 +12,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 8%;
+        width: 15vh;
     }
     .router-wrapper img {
         width: 100%;

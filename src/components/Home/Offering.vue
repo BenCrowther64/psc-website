@@ -69,4 +69,10 @@ export default {
     transform: scale(1.05,1.05);
 }
 
+@media only screen and (max-width: 600px) {
+    .offering-header {
+        margin-bottom: 2vh;
+    }
+}
+
 </style>

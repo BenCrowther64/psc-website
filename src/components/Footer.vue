@@ -121,4 +121,17 @@
   .header{
     color: #000000;
   }
+
+  @media (pointer:none), (pointer:coarse){
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .wrapper{
+      width: 90%;
+      margin: 10px 20px;
+    }
+  }
 </style>

@@ -4,6 +4,7 @@ import BottomFooter from '../components/Footer.vue';
 import NavScreen from '../components/NavScreen.vue';
 import Offering from '../components/Home/Offering.vue';
 import RecentProject from '../components/Home/RecentProject.vue';
+import ContactDiv from '../components/Home/ContactDiv.vue';
 
 import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
@@ -14,14 +15,8 @@ import OfferingImage1 from '../assets/images/home/PLACEHOLDER.jpg';
 export default {
   data() {
     return {
-      show : false,
       Slides: [SlideShow1, SlideShow2, SlideShow3],
       OfferingImage1,
-    }
-  },
-  methods: {
-    toggleNavScreen() {
-      this.show = !this.show
     }
   },
   setup() {
@@ -37,19 +32,17 @@ export default {
     BottomFooter,
     NavScreen,
     RecentProject,
+    ContactDiv,
   },
 }
 </script>
 
 <template>
-    <Transition>
-      <NavScreen v-if="show" @toggle="toggleNavScreen"/>
-    </Transition>
+    <NavScreen/>
 
     <section class="carousel">
       <Carousel :slides="Slides" />
       <img id="main-branding" src = "../assets/images/branding/logo-base-ver-3-blue.png"/>
-      <button class="nav-screen-button open" @click="toggleNavScreen()"></button>
     </section>
     
     <section class="main-header text">
@@ -129,17 +122,7 @@ export default {
         </div>  
     </section>
 
-    <section class="contact">
-      <div class = contact-wrapper>
-        <div class = contact-text>
-          <h1>PLEASE GET IN TOUCH</h1>
-          <p>Paul Smith (Quantity Surveying & Project Management) T: 07713 167555</p>
-          <a href="mailto: pauls@psc-surveying-ltd.com">pauls@psc-surveying-ltd.com</a>
-          <p>Stephen Crowther (Building Surveying & Principal Designer) T: 07912 392045</p>
-          <a href="mailto: stephenc@psc-surveying-ltd.com">stephenc@psc-surveying-ltd.com</a>
-        </div>
-      </div>
-    </section>
+    <ContactDiv />
 
     <BottomFooter />
 
@@ -175,73 +158,13 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 20%;
-    max-height: 20%;
+    width: 40vh;
     object-fit: cover;
-}
-
-.nav-screen-button{
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: #f3f3f3;
-    cursor: pointer;
-}
-
-.open{
-    background-image: url(../assets/images/home/hamburger.png);
-    background-size: cover;
-}
-
-.v-enter-active, .v-leave-active {
-    transition: opacity 0.5s;
-}
-.v-enter-from, .v-leave-to {
-    opacity: 0;
 }
 
 .text{
   color: black;
 }
-
-.contact{
-  display: flex;
-  justify-content: center;
-}
-.contact-wrapper{
-  margin: 0% 1% 1% 1%;
-  background-color: #f1f1f1;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.contact-text{
-  padding: 3%;
-  width: 100%;
-  text-align: center;
-}
-
-.contact-text h1{
-  font-size: 30px;
-  margin: 0;
-  color: var(--psc-dark-blue);
-}
-
-.contact-text a{
-  font-weight: bolder;
-  color: var(--psc-dark-blue);
-  background: none;
-}
-
-.contact-text a:hover{
-  text-decoration: underline;
-}
-
 .offerings-wrapper{
   max-width: 100%;
   display: flex;
@@ -276,5 +199,14 @@ export default {
 #name {
   color: var(--psc-dark-blue);
   font-weight: 500;
+}
+
+@media (pointer:none), (pointer:coarse){
+  #main-branding{
+    width: 25vh;
+  }
+  .offerings-wrapper{
+    flex-direction: column;
+  } 
 }
 </style>
