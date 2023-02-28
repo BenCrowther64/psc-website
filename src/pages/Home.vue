@@ -209,4 +209,14 @@ export default {
     flex-direction: column;
   } 
 }
+
+@media (max-width: 1080px) {
+  #main-branding{
+    width: 25vh;
+  }
+
+  .offerings-wrapper{
+    flex-direction: column;
+  }
+}
 </style>

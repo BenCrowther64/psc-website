@@ -161,4 +161,39 @@ export default {
     margin-top: 2vh;
     }
   }
+
+  @media (max-width: 1080px) {
+    .directors-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .directors-container img {
+    width: 80vw;
+    height: 40vh;
+    object-fit: cover;
+  }
+  .director {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+  }
+  .text-wrapper p {
+    font-size: 15px;
+  }
+
+  .top-banner h1 {
+    font-size: 1.5em;
+  }
+
+  #name {
+    margin-top: 2vh;
+    }
+  }
 </style>
