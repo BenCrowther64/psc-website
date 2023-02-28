@@ -206,6 +206,7 @@ export default {
     width: 25vh;
   }
   .offerings-wrapper{
+    width: 50vw;
     flex-direction: column;
   } 
 }
@@ -216,7 +217,10 @@ export default {
   }
 
   .offerings-wrapper{
+    width: 50vw;
     flex-direction: column;
+    padding-left: 25vw;
+    gap: 2vh;
   }
 }
 </style>

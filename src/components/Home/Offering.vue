@@ -20,10 +20,8 @@ export default {
 
 <style scoped>
 .offering-header {
-    display: flex;
     flex-grow: 1;
     flex-basis: 0;
-    flex-direction: column;
 }
 
 .offering-header:hover{
@@ -33,7 +31,7 @@ export default {
 .text-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     text-align: left;
     transition: all .3s ease;
     vertical-align: middle;
@@ -69,10 +67,10 @@ export default {
     transform: scale(1.05,1.05);
 }
 
-@media only screen and (max-width: 600px) {
-    .offering-header {
-        margin-bottom: 2vh;
-    }
+@media (max-width: 1080px) {
+    .text-wrapper:hover{
+    transform: translate(0, -5px);
+}
 }
 
 </style>

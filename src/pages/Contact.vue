@@ -81,4 +81,28 @@ export default {
   }
 }
 
+@media (max-width: 1080px) {
+  .contact-container {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-container p {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--psc-dark-blue);
+    margin: 1%;
+  }
+
+  .contact-container .contact-box {
+    height: 45%;
+    width: 100%;
+    margin: 1%;
+  }
+}
+
 </style>
