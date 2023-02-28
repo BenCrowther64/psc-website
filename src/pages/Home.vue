@@ -91,32 +91,32 @@ export default {
         <div class = "projects-wrapper">
           <RecentProject
             :image="OfferingImage1"
-            projectName="EXAMPLE PROJECT NAME"
+            projectName="Project 1"
             :isLong="true"
           />
           <RecentProject
             :image="OfferingImage1"
-            projectName="EXAMPLE PROJECT NAME"
+            projectName="Project 2"
             :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
-            projectName="EXAMPLE PROJECT NAME"
+            projectName="Project 3"
             :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
-            projectName="EXAMPLE PROJECT NAME"
+            projectName="Project 4"
             :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
-            projectName="EXAMPLE PROJECT NAME"
+            projectName="Project 5"
             :isLong="false"
           />
           <RecentProject
             :image="OfferingImage1"
-            projectName="EXAMPLE PROJECT NAME"
+            projectName="Project 6"
             :isLong="true"
           />
         </div>  

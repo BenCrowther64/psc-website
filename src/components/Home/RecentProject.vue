@@ -1,11 +1,13 @@
 <template>
     <div @mouseover="hover = true" @mouseleave="hover = false" :class="[isLong ? 'long-project-container' : 'project-container']">
-        <img :src="image">
-        <Transition>
-            <div v-if="hover" class="text-container">
-                <h1>{{ projectName }}</h1>
-            </div>
-        </Transition>
+        <router-link :to="'/Projects/' + projectName">
+            <img :src="image">
+            <Transition>
+                <div v-if="hover" class="text-container">
+                    <h1>{{ projectName }}</h1>
+                </div>
+            </Transition>
+        </router-link>
     </div>
 </template>
 
