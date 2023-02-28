@@ -1,12 +1,14 @@
 <template>
     <div class="offering-header">
-        <div class="text-wrapper">
-            <div class = "image-container">
-                <img :src="image">
+        <router-link :to="link">
+            <div class="text-wrapper">
+                <div class = "image-container">
+                    <img :src="image">
+                </div>
+                <h1>{{ title }}</h1>
+                <p>{{ text }}</p>
             </div>
-            <h1>{{ title }}</h1>
-            <p>{{ text }}</p>
-        </div>
+        </router-link>
     </div>
 </template>
 

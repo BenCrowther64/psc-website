@@ -1,16 +1,18 @@
 <script>
 import Footer from '../components/Footer.vue';
-
+import HomeImageLink from '../components/HomeImage.vue';
 
 export default {
   components: {
+    HomeImageLink,
     Footer,
   },
 }
 </script>
 
 <template>
-    <h3> Projects </h3>
+    <HomeImageLink></HomeImageLink>
+    <h3> People</h3>
     <Footer></Footer>
 </template>
 <style></style>

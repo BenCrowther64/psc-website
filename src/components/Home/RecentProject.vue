@@ -34,6 +34,7 @@
     object-fit: cover;
 }
 .project-container:hover{
+    transform: translate(0, -5px);
     cursor: pointer;
 }
 .project-container img{
@@ -51,6 +52,7 @@
 }
 .long-project-container:hover{
     cursor: pointer;
+    transform: translate(0, -8px);
 }
 .long-project-container img{
     width: 100%;

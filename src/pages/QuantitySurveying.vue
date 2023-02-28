@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <h3> Projects </h3>
+    <h3> Quantity Surveying </h3>
     <Footer></Footer>
 </template>
 <style></style>

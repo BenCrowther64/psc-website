@@ -9,11 +9,11 @@
         <button class="nav-screen-button close" @click="$emit('toggle')"></button>
         <div class="link-wrapper">
             <router-link to="/">HOME</router-link>
-            <router-link to="/About">PEOPLE</router-link>
-            <router-link to="/Quantity-Surveying">QUANTITY SURVEYING</router-link>
-            <router-link to="/Building-Surveying">BUILDING SURVEYING</router-link>
-            <router-link to="/Project-Management">PROJECT MANAGEMENT</router-link>
-            <router-link to="/Principal-Designer">PRINCIPAL DESIGNER</router-link>
+            <router-link to="/People">PEOPLE</router-link>
+            <router-link to="/Quantity Surveying">QUANTITY SURVEYING</router-link>
+            <router-link to="/Building Surveying">BUILDING SURVEYING</router-link>
+            <router-link to="/Project Management">PROJECT MANAGEMENT</router-link>
+            <router-link to="/Principal Designer">PRINCIPAL DESIGNER</router-link>
             <router-link to="/Projects">PROJECTS</router-link>
             <router-link to="/Contact">CONTACT</router-link>
         </div>
