@@ -21,7 +21,6 @@ export default {
     <div class = "contact-container">
       <p>PSC Surveying Ltd. <br> Thomborough Hall <br> Leyburn <br> North Yorkshire <br> DL8 5AB</p>
       <ContactDiv class = "contact-box"/>
-      
     </div>
     <Footer></Footer>
 </template>
@@ -34,7 +33,6 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
   margin: 1%;
 }
 
@@ -47,9 +45,16 @@ export default {
 }
 
 .contact-container .contact-box {
-  height: 45%;
+  align-items: center;
+  height: 10vh;
   width: 100%;
   margin: 1%;
+}
+
+@media (max-width: 1080px) {
+  .contact-container p{
+    width: 30%;
+  }
 }
 
 @media (pointer:none), (pointer:coarse){
