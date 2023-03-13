@@ -126,7 +126,7 @@
     .footer-wrapper {
       flex-direction: column;
       align-items: center;
-      padding: 5px;
+      max-width: 100%;
     }
 
     .wrapper{
@@ -134,18 +134,17 @@
       margin: 10px 20px;
     }
   }
-  
 
-  @media (max-width: 1080px) {
-    .footer-wrapper {
-      flex-direction: column;
-      align-items: center;
-      padding: 5px;
-    }
-
+  @media (max-width: 1200px) {
     .wrapper{
       width: 90%;
       margin: 10px 20px;
+    }
+
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
     }
 }
 

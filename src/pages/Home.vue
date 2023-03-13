@@ -10,13 +10,21 @@ import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
 import SlideShow3 from '../assets/images/home/img3.png';
 
-import OfferingImage1 from '../assets/images/home/PLACEHOLDER.jpg';
+import OfferingImage1 from '../assets/images/home/offering1.jpg';
+import QuantitySurveyImage from '../assets/images/home/offering1.jpg';
+import ProjectManagerImage from '../assets/images/home/offering2.jpeg';
+import BuildingSurveyingImage from '../assets/images/home/offering4.jpg';
+import PrincipalDesignerImage from '../assets/images/home/offering3.jpg';
 
 export default {
   data() {
     return {
       Slides: [SlideShow1, SlideShow2, SlideShow3],
       OfferingImage1,
+      QuantitySurveyImage,
+      ProjectManagerImage,
+      BuildingSurveyingImage,
+      PrincipalDesignerImage,
     }
   },
   setup() {
@@ -62,25 +70,25 @@ export default {
           title="QUANTITY SURVEYING"
           text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
           link="/Quantity Surveying"
-          :image="OfferingImage1"
+          :image="QuantitySurveyImage"
         />
         <Offering
           title="PROJECT MANAGEMENT"
           text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
           link="/Project Management"
-          :image="OfferingImage1"
+          :image="ProjectManagerImage"
         />
         <Offering
           title="BUILDING SURVEYING"
           text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
           link="/Building Surveying"
-          :image="OfferingImage1"
+          :image="BuildingSurveyingImage"
         />
         <Offering
           title="PRINCIPAL DESIGNER"
           text="We are a corporate member of the Association of Project Safety and work closely with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
           link="/Principal Designer"
-          :image="OfferingImage1"
+          :image="PrincipalDesignerImage"
         />
       </div>
     </section>
@@ -206,21 +214,21 @@ export default {
     width: 25vh;
   }
   .offerings-wrapper{
-    width: 50vw;
+    width: 90vw;
     flex-direction: column;
+    gap: 2vh;
   } 
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 738px) {
   #main-branding{
     width: 25vh;
   }
 
   .offerings-wrapper{
-    width: 50vw;
     flex-direction: column;
-    padding-left: 25vw;
     gap: 2vh;
+    margin: 1%;
   }
 }
 </style>

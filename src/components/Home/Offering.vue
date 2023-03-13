@@ -20,6 +20,7 @@ export default {
 
 <style scoped>
 .offering-header {
+    width: 24%;
     flex-grow: 1;
     flex-basis: 0;
 }
@@ -54,8 +55,9 @@ export default {
 }
 
 .image-container img{
-    width: 100%;
-    height: 100%;
+    width: 23.6vw;
+    height: 23.6vw;
+    object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
 
@@ -67,10 +69,19 @@ export default {
     transform: scale(1.05,1.05);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 738px) {
     .text-wrapper:hover{
-    transform: translate(0, -5px);
-}
+        transform: translate(0, -5px);
+    }
+
+    .offering-header{
+        width: 100%;
+    }
+
+    .image-container img{
+        width: 99vw;
+        height: 99vw;
+    }
 }
 
 </style>
