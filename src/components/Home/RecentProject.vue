@@ -87,4 +87,25 @@
 .v-enter-from, .v-leave-to {
     opacity: 0;
 }
+
+@media (pointer:none), (pointer:coarse) {
+    .project-container:hover{
+        transform: translate(0, -2px);
+    }
+
+    .long-project-container:hover{
+        transform: translate(0, -2px);
+    }
+}
+
+@media (max-width: 738px)
+{
+    .project-container:hover{
+        transform: translate(0, -2px);
+    }
+
+    .long-project-container:hover{
+        transform: translate(0, -2px);
+    }
+}
 </style>

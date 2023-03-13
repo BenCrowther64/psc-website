@@ -123,15 +123,15 @@
   }
 
   @media (pointer:none), (pointer:coarse){
+    .wrapper{
+      width: 90%;
+      margin: 10px 20px;
+    }
+
     .footer-wrapper {
       flex-direction: column;
       align-items: center;
       max-width: 100%;
-    }
-
-    .wrapper{
-      width: 90%;
-      margin: 10px 20px;
     }
   }
 

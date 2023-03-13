@@ -69,6 +69,22 @@ export default {
     transform: scale(1.05,1.05);
 }
 
+@media (pointer:none), (pointer:coarse){
+    .text-wrapper:hover{
+        transform: translate(0, -5px);
+    }
+
+    .offering-header{
+        width: 100%;
+    }
+
+    .image-container img{
+        width: 99vw;
+        height: 99vw;
+    }
+  }
+
+
 @media (max-width: 738px) {
     .text-wrapper:hover{
         transform: translate(0, -5px);

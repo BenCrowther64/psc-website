@@ -214,9 +214,9 @@ export default {
     width: 25vh;
   }
   .offerings-wrapper{
-    width: 90vw;
     flex-direction: column;
     gap: 2vh;
+    margin: 1%;
   } 
 }
 
