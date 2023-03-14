@@ -15,7 +15,11 @@ export default {
 
     <div class = "top-banner">
       <h1>Meet the Team</h1>
-      <h1 id = "explanation">AN EXPERIENCED PRACTICE OF CHARTERED SURVEYORS, QUANTITY SURVEYORS, PROJECT MANAGERS, BUILDING SURVEYORS & PRINCIPLE DESIGNERS BASED IN LEEDS SINCE 2011.</h1>
+      <h1 id = "explanation">
+        We are a team of experienced professionals based in Leeds, dedicated to providing top-notch services in the fields of Chartered Surveying, Quantity Surveying, Project Management, 
+        Building Surveying, and Principal Designing. Since our establishment in 2011, we have been delivering high-quality and cost-effective solutions to our clients, meeting their needs and 
+        exceeding their expectations.
+      </h1>
     </div>
 
     <div class = directors-wrapper>

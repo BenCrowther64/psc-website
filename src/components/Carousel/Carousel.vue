@@ -26,6 +26,7 @@ data: () => ({
     currentSlide: 0,
     slideInterval: null,
     direction: "right",
+    tabFocus: false,
 }),
 methods: {
     setCurrentSlide(index) {
@@ -69,12 +70,43 @@ methods: {
         this.prev(step);
     }
     },
+    detectFocusOut() {
+        let inView = false;
+
+        const onWindowFocusChange = (e) => {
+            if ({ focus: 1, pageshow: 1 }[e.type]) {
+                if (inView) return;
+                this.tabFocus = true;
+                inView = true;
+            } else if (inView) {
+                this.tabFocus = !this.tabFocus;
+                inView = false;
+            }
+        };
+
+        window.addEventListener('focus', onWindowFocusChange);
+        window.addEventListener('blur', onWindowFocusChange);
+        window.addEventListener('pageshow', onWindowFocusChange);
+        window.addEventListener('pagehide', onWindowFocusChange);
+    }
 },
 mounted() {
     this.startSlideTimer();
 },
 beforeUnmount() {
     this.stopSlideTimer();
+},
+created() {
+    this.detectFocusOut();
+},
+watch:{
+    tabFocus(value) {
+      if (value) {
+        this.startSlideTimer();
+      } else{
+        this.stopSlideTimer();
+      }
+    },
 },
 };
 </script>

@@ -32,4 +32,20 @@
 .right {
     right: 0;
 }
+
+@media (pointer:none), (pointer:coarse){
+   .carousel-control {
+       height: 50px;
+       width: 30px;
+       top: calc(46%);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-control {
+       height: 50px;
+       width: 30px;
+       top: calc(46%);
+    }
+}
 </style>

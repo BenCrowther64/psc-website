@@ -161,6 +161,10 @@ export default {
     gap: 2vh;
     margin: 1%;
   } 
+
+  .text-wrapper{
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width: 738px) {
@@ -172,6 +176,10 @@ export default {
     flex-direction: column;
     gap: 2vh;
     margin: 1%;
+  }
+
+  .text-wrapper{
+    font-size: 1.3em;
   }
 
 }
