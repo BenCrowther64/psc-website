@@ -14,11 +14,11 @@ export default {
     <LogoNavBar></LogoNavBar>
 
     <div class = "top-banner">
-      <h1>Meet the Team</h1>
+      <h1>MEET THE TEAM</h1>
       <h1 id = "explanation">
-        We are a team of experienced professionals based in Leeds, dedicated to providing top-notch services in the fields of Chartered Surveying, Quantity Surveying, Project Management, 
-        Building Surveying, and Principal Designing. Since our establishment in 2011, we have been delivering high-quality and cost-effective solutions to our clients, meeting their needs and 
-        exceeding their expectations.
+        WE ARE A TEAM OF EXPERIENCED PROFESSIONALS BASED IN LEEDS, DEDICATED TO PROVIDING TOP-NOTCH SERVICES IN THE FIELDS OF CHARTERED SURVEYING, QUANTITY SURVEYING, PROJECT MANAGEMENT, 
+        BUILDING SURVEYING, AND PRINCIPAL DESIGNING. SINCE OUR ESTABLISHMENT IN 2011, WE HAVE BEEN DELIVERING HIGH-QUALITY AND COST-EFFECTIVE SOLUTIONS TO OUR CLIENTS, MEETING THEIR NEEDS AND 
+        EXCEEDING THEIR EXPECTATIONS.
       </h1>
     </div>
 
