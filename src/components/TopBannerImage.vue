@@ -17,7 +17,7 @@ export default {
   methods: {
     scrollDown() {
       window.scrollTo({
-        top: 45 * window.innerHeight/100,
+        top: 50 * window.innerHeight/100,
         behavior: 'smooth'
       });
     }
@@ -39,7 +39,7 @@ export default {
 <style scoped>
   .top-banner-wrapper {
     width: 100%;
-    height: 45vh;
+    height: 50vh;
   }
 
   .top-banner-wrapper img {
@@ -51,7 +51,7 @@ export default {
 
   .top-banner-wrapper h1 {
     position: absolute;
-    top: 20%;
+    top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--psc-light-gray);
@@ -62,7 +62,7 @@ export default {
 
   .top-banner-wrapper button {
     position: absolute;
-    top: 42%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;

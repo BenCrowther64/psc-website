@@ -53,6 +53,9 @@ const routes = [
 export default function (history) {
   return createRouter({
     history,
-    routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+      return { top: 0 }
+    }
   })
 }

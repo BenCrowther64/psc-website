@@ -130,4 +130,14 @@ export default{
     }
 }
 
+@media (max-width: 768px) {
+    .link-wrapper{
+        font-size: 20px;
+    }
+
+    .close{
+        right: 1.6%;
+    }
+}
+
 </style>

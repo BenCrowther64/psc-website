@@ -69,25 +69,25 @@ export default {
         <Offering
           title="QUANTITY SURVEYING"
           text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
-          link="/Quantity Surveying"
+          link="/Quantity-Surveying"
           :image="QuantitySurveyImage"
         />
         <Offering
           title="PROJECT MANAGEMENT"
           text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
-          link="/Project Management"
+          link="/Project-Management"
           :image="ProjectManagerImage"
         />
         <Offering
           title="BUILDING SURVEYING"
           text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
-          link="/Building Surveying"
+          link="/Building-Surveying"
           :image="BuildingSurveyingImage"
         />
         <Offering
           title="PRINCIPAL DESIGNER"
           text="We are a corporate member of the Association of Project Safety and work closely with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
-          link="/Principal Designer"
+          link="/Principal-Designer"
           :image="PrincipalDesignerImage"
         />
       </div>

@@ -1,20 +1,17 @@
 <script>
 import Footer from '../components/Footer.vue';
-import HomeImageLink from '../components/HomeImage.vue';
-import NavScreen from '../components/NavScreen.vue';
+import LogoNavBar from '../components/LogoNavBar.vue';
 
 export default {
   components: {
-    HomeImageLink,
+    LogoNavBar,
     Footer,
-    NavScreen,
   },
 }
 </script>
 
 <template>
-    <NavScreen darkMode="true"/>
-    <HomeImageLink></HomeImageLink>
+    <LogoNavBar></LogoNavBar>
 
     <div class = "top-banner">
       <h1>Meet the Team</h1>
@@ -191,6 +188,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: 0%;
+    max-width: 80vw;
   }
   .text-wrapper p {
     font-size: 15px;
@@ -209,7 +207,7 @@ export default {
   }
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 768px) {
   .directors-wrapper {
     text-align: center;
   }
@@ -233,6 +231,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: 0%;
+    max-width: 80vw;
   }
   .text-wrapper p {
     font-size: 15px;
