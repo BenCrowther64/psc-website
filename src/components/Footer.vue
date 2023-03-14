@@ -28,10 +28,10 @@
       </b>
       <div class = "links">
         <router-link to="/People">People</router-link>
-        <router-link to="/Quantity Surveying">Quantity Surveying</router-link>
-        <router-link to="/Building Surveying">Building Surveying</router-link>
-        <router-link to="/Project Management">Project Management</router-link>
-        <router-link to="/Principle Designer">Principle Designer</router-link>
+        <router-link to="/Quantity-Surveying">Quantity Surveying</router-link>
+        <router-link to="/Building-Surveying">Building Surveying</router-link>
+        <router-link to="/Project-Management">Project Management</router-link>
+        <router-link to="/Principal-Designer">Principle Designer</router-link>
         <router-link to="/Projects">Projects</router-link>
         <router-link to="/Contact">Contact</router-link>
       </div>

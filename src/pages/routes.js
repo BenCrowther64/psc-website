@@ -20,7 +20,7 @@ const routes = [
   },
 
   {
-    path: '/Building Surveying/',
+    path: '/Building-Surveying/',
     component: BuildingSurveying
   },
 
@@ -35,17 +35,17 @@ const routes = [
   },
 
   {
-    path: '/Principal Designer/',
+    path: '/Principal-Designer/',
     component: PrincipalDesigner
   },
 
   {
-    path: '/Project Management/',
+    path: '/Project-Management/',
     component: ProjectManagement
   },
 
   {
-    path: '/Quantity Surveying/',
+    path: '/Quantity-Surveying/',
     component: QuantitySurveying
   }
 ]

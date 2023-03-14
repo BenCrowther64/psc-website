@@ -8,12 +8,12 @@
 
 <style>
     .router-wrapper {
-        margin: 1%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        top: 1%;
+        left: 1%;
         width: 15vh;
     }
+    
     .router-wrapper img {
         width: 100%;
         object-fit: contain;
