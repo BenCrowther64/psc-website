@@ -3,8 +3,8 @@ import Carousel from '../components/Carousel/Carousel.vue';
 import BottomFooter from '../components/Footer.vue';
 import NavScreen from '../components/NavScreen.vue';
 import Offering from '../components/Home/Offering.vue';
-import RecentProject from '../components/Home/RecentProject.vue';
 import ContactDiv from '../components/Home/ContactDiv.vue';
+import RecentProjectContainer from '../components/Home/RecentProjectContainer.vue';
 
 import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
@@ -39,8 +39,8 @@ export default {
     Carousel,
     BottomFooter,
     NavScreen,
-    RecentProject,
     ContactDiv,
+    RecentProjectContainer,
   },
 }
 </script>
@@ -92,43 +92,8 @@ export default {
         />
       </div>
     </section>
-    
-    <section class="recent-projects">
-        <h1>RECENT PROJECTS...</h1>
-        <p>Some recent projects worked on by <span id="name">PSC Surveying Ltd.</span></p>
-        <div class = "projects-wrapper">
-          <RecentProject
-            :image="OfferingImage1"
-            projectName="Project 1"
-            :isLong="true"
-          />
-          <RecentProject
-            :image="OfferingImage1"
-            projectName="Project 2"
-            :isLong="false"
-          />
-          <RecentProject
-            :image="OfferingImage1"
-            projectName="Project 3"
-            :isLong="false"
-          />
-          <RecentProject
-            :image="OfferingImage1"
-            projectName="Project 4"
-            :isLong="false"
-          />
-          <RecentProject
-            :image="OfferingImage1"
-            projectName="Project 5"
-            :isLong="false"
-          />
-          <RecentProject
-            :image="OfferingImage1"
-            projectName="Project 6"
-            :isLong="true"
-          />
-        </div>  
-    </section>
+
+    <RecentProjectContainer :homePage="true"/>
 
     <ContactDiv />
 
@@ -151,6 +116,7 @@ export default {
     width: 100%;
     justify-content: center;
     text-align: center;
+    color: var(--psc-dark-blue);
 }
 
 .carousel {
@@ -181,29 +147,6 @@ export default {
   gap: 1%;
 }
 
-.recent-projects{
-  margin: 2% 1% 0% 1%;
-}
-
-.recent-projects p{
-  margin: 5px 0px;
-  font-size: 15px;
-}
-
-.recent-projects h1{
-  color:var(--psc-dark-blue);
-  font-size: 30px;
-  margin-bottom: 0px;
-}
-
-.projects-wrapper{
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1%;
-  justify-content: space-evenly;
-}
-
 #name {
   color: var(--psc-dark-blue);
   font-weight: 500;
@@ -230,5 +173,6 @@ export default {
     gap: 2vh;
     margin: 1%;
   }
+
 }
 </style>

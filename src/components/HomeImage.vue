@@ -1,7 +1,7 @@
 <template>
     <div class = "router-wrapper">
         <router-link to="/">
-            <img src="src\assets\images\branding\logo-base-ver-3-blue.png">
+            <img src="..\assets\images\branding\logo-base-ver-3-blue.png">
         </router-link>
     </div>
 </template>

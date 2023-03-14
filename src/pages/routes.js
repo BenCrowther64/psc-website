@@ -8,46 +8,77 @@ import PrincipalDesigner from './PrincipalDesigner.vue';
 import ProjectManagement from './ProjectManagement.vue';
 import QuantitySurveying from './QuantitySurveying.vue';
 
+import Dilapidations from './BuildingSurveying/Dilapidations.vue';
+import PartyWall from './BuildingSurveying/PartyWallService.vue';
+import Surveying from './BuildingSurveying/Surveying.vue';
+
 const routes = [
   {
     path: '/',
-    component: Homepage
+    component: Homepage,
+    meta: { title: 'PSC Surveying Ltd.' },
+    
   },
 
   {
     path: '/Projects/',
-    component: Projects
+    component: Projects,
+    meta: { title: 'Projects - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Building-Surveying/',
-    component: BuildingSurveying
+    component: BuildingSurveying,
+    meta: { title: 'Building Surveying - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Contact/',
-    component: Contact
+    component: Contact,
+    meta: { title: 'Contact - PSC Surveying Ltd.' },
   },
 
   {
     path: '/People/',
-    component: People
+    component: People,
+    meta: { title: 'People - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Principal-Designer/',
-    component: PrincipalDesigner
+    component: PrincipalDesigner,
+    meta: { title: 'Principal Designer - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Project-Management/',
-    component: ProjectManagement
+    component: ProjectManagement,
+    meta: { title: 'Project Management - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Quantity-Surveying/',
-    component: QuantitySurveying
-  }
+    component: QuantitySurveying,
+    meta: { title: 'Quantity Surveying - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Building-Surveying/Dilapidations/',
+    component: Dilapidations,
+    meta: { title: 'Dilapidations - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Building-Surveying/Party-Wall/',
+    component: PartyWall,
+    meta: { title: 'Party Wall - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Building-Surveying/Surveying/',
+    component: Surveying,
+    meta: { title: 'Surveying - PSC Surveying Ltd.' },
+  },
 ]
 
 export default function (history) {

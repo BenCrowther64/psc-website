@@ -96,6 +96,16 @@
     .long-project-container:hover{
         transform: translate(0, -2px);
     }
+
+    .project-container{
+        width: 49%;
+        height: 20vh;
+    }
+
+    .long-project-container{
+        width: 49%;
+        height: 20vh;
+    }
 }
 
 @media (max-width: 738px)
@@ -106,6 +116,16 @@
 
     .long-project-container:hover{
         transform: translate(0, -2px);
+    }
+
+    .project-container{
+        width: 49%;
+        height: 20vh;
+    }
+
+    .long-project-container{
+        width: 49%;
+        height: 20vh;
     }
 }
 </style>

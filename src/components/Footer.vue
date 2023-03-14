@@ -17,7 +17,7 @@
           Get in touch
         </b>
         <div class = "touch">
-          <p style="margin: 0%;">PSC Surveying Ltd. <br> Thomborough Hall <br> Leyburn <br> North Yorkshire <br> DL8 5AB</p>
+          <p style="margin: 0%;">PSC Surveying Ltd. <br> Thornborough Hall <br> Leyburn <br> North Yorkshire <br> DL8 5AB</p>
           <a id="link" href="mailto: pauls@psc-surveying-ltd.com">Paul Smith - 07713 167555</a>
           <a id="link" href="mailto: stephenc@psc-surveying-ltd.com">Stephen Crowther - 07912 392045 </a>
         </div>

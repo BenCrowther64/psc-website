@@ -19,7 +19,7 @@ export default {
     <HomeImageLink></HomeImageLink>
 
     <div class = "contact-container">
-      <p>PSC Surveying Ltd. <br> Thomborough Hall <br> Leyburn <br> North Yorkshire <br> DL8 5AB</p>
+      <p>PSC Surveying Ltd. <br> Thornborough Hall <br> Leyburn <br> North Yorkshire <br> DL8 5AB</p>
       <ContactDiv class = "contact-box"/>
     </div>
     <Footer></Footer>

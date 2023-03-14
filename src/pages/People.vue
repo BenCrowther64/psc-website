@@ -23,7 +23,7 @@ export default {
       <div>
         <div class = directors-container>
           <div class = director>  
-            <img src="../assets/images/people/paul.jpeg">
+            <img src="../assets/images/people/paul.jpg">
               <div class = "text-wrapper">
                 <h3 id = "name">Paul Smith</h3> 
                 <p id = "role">Cost Consultancy and Project Management Director</p> 
@@ -46,7 +46,7 @@ export default {
               </div>
           </div>
           <div class = director>  
-            <img src="../assets/images/people/stephen.jpeg">  
+            <img src="../assets/images/people/stephen.jpg">  
             <div class = "text-wrapper">
                 <h3 id = "name">Stephen Crowther</h3> 
                 <p id = "role">Building Surveying and Principal Designer</p> 

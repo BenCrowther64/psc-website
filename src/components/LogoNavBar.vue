@@ -20,6 +20,6 @@ export default {
 <style>
     .top-wrapper {
         width: 100%;
-        height: 10vh;
+        height: 9vh;
     }
 </style>
