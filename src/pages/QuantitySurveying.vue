@@ -25,8 +25,8 @@ export default {
 
     <div class = bs-heading>
       <h1>
-        WITH EXTENSIVE EXPERIENCE ACROSS A WIDE RANGE OF PRIVATE AND PUBLIC SECTORS, OUR EXPERT BUILDING SURVEYING TEAM OFFERS DETAILED INSPECTIONS AND SURVEYS TO ASSESS 
-        THE CONDITION OF A BUILDING'S STRUCTURE ENSURING THE SAFETY, INTEGRITY, AND VALUE OF YOUR PROPERTY.
+        WITH YEARS OF EXPERIENCE ACROSS VARIOUS INDUSTRIES AND PROJECT TYPES, OUR TEAM OF EXPERT QUANTITY SURVEYORS OFFERS PRECISE ESTIMATIONS AND COST PLANNING SERVICES 
+        TO ENSURE THE FINANCIAL SUCCESS AND EFFICIENCY OF YOUR CONSTRUCTION PROJECT.
       </h1>
     </div>
 
@@ -34,21 +34,21 @@ export default {
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Dilapidations/'>
           <div class = bs-offering>
-            DILAPIDATIONS
+            EXAMPLE 1
           </div>
         </router-link>
       </div>
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Party-Wall/'>
           <div class = bs-offering>
-            PARTY WALL
+            EXAMPLE 2
           </div>
         </router-link>
       </div>
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Surveying/'>
           <div class = bs-offering>
-            SURVEYING
+            EXAMPLE 3
           </div>
         </router-link>
       </div>

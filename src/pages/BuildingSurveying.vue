@@ -3,7 +3,7 @@ import Footer from '../components/Footer.vue';
 import TopBannerImage from '../components/TopBannerImage.vue';
 import RecentProjectContainer from '../components/Home/RecentProjectContainer.vue';
 
-import OfferingImage1 from '../assets/images/home/offering1.jpg';
+import Banner from '../assets/images/services/building-surveying/banner.jpg';
 
 export default {
   components: {
@@ -14,14 +14,14 @@ export default {
 
   data() {
     return {
-      OfferingImage1,
+      Banner,
     }
   },
 }
 </script>
 
 <template>
-    <TopBannerImage text = "BUILDING SURVEYING"></TopBannerImage>
+    <TopBannerImage text = "BUILDING SURVEYING" :image="Banner" :dark="true"></TopBannerImage>
 
     <div class = bs-heading>
       <h1>
