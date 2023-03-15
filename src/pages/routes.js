@@ -12,6 +12,8 @@ import Dilapidations from './BuildingSurveying/Dilapidations.vue';
 import PartyWall from './BuildingSurveying/PartyWallService.vue';
 import Surveying from './BuildingSurveying/Surveying.vue';
 
+import PartyWallProjects from './Projects/PartyWall/PartyWall.vue';
+
 const routes = [
   {
     path: '/',
@@ -79,6 +81,12 @@ const routes = [
     component: Surveying,
     meta: { title: 'Surveying - PSC Surveying Ltd.' },
   },
+
+  {
+    path: '/Projects/Party-Wall/',
+    component: PartyWallProjects,
+    meta: { title: 'Party Wall Projects - PSC Surveying Ltd.' },
+  }
 ]
 
 export default function (history) {

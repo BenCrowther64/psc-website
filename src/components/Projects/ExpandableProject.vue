@@ -1,11 +1,9 @@
 <template>
     <div class="project-container">
-        <router-link :to="'/Projects/' + projectUrl">
             <img :src="image">
             <div class="text-container">
-                <h1>{{ projectType }}</h1>
+                <h1>{{ projectName }}</h1>
             </div>
-        </router-link>
     </div>
 </template>
 
@@ -13,8 +11,7 @@
     export default{
         props: {
             image: String,
-            projectType: String,
-            projectUrl : String,
+            projectName: String,
         },
     }
 </script>
@@ -25,6 +22,7 @@
     overflow: hidden;
     width: 25vw;
     height: 25vw;
+    cursor: pointer;
 }
 .project-container img{
     width: 100%;

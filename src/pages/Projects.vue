@@ -27,12 +27,12 @@ export default {
       QUANTITY SURVEYING, AND PRINCIPAL DESIGNER SERVICES, ENSURING THE SUCCESSFUL DELIVERY OF EACH PROJECT TO THE HIGHEST STANDARDS.</h1>
 
     <div class="project-type-container">
-      <ProjectType class = "project" projectType="PARTY WALL" :image="PartyWallImage"/>
-      <ProjectType class = "project" projectType="DILAPIDATIONS" :image="PartyWallImage"/>
-      <ProjectType class = "project" projectType="BUILDING SURVEYING" :image="PartyWallImage"/>
-      <ProjectType class = "project" projectType="PRINCIPAL DESIGNER" :image="PartyWallImage"/>
-      <ProjectType class = "project" projectType="PROJECT MANAGEMENT" :image="PartyWallImage"/>
-      <ProjectType class = "project" projectType="QUANTITY SURVEYING" :image="PartyWallImage"/>
+      <ProjectType class = "project" projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType class = "project" projectType="DILAPIDATIONS" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType class = "project" projectType="BUILDING SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType class = "project" projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType class = "project" projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType class = "project" projectType="QUANTITY SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
     </div>
 
     <Footer></Footer>
