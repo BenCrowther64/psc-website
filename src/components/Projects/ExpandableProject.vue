@@ -1,10 +1,19 @@
 <template>
-    <div class="project-container">
-            <img :src="image">
-            <div class="text-container">
-                <h1>{{ projectName }}</h1>
-            </div>
+
+    <div class="project-container" @click="expand">
+        <img :src="image">
+        <div class="text-container">
+            <h1>{{ projectName }}</h1>
+        </div>
     </div>
+
+    <div v-if="expanded" class="full-project-container" @click="expand">
+        <img :src="image">
+        <div class="full-text-container">
+            <h1>{{ projectName }}</h1>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -13,6 +22,18 @@
             image: String,
             projectName: String,
         },
+
+        data() {
+            return {
+                expanded: false,
+            }
+        },
+
+        methods: {
+            expand() {
+                this.expanded = !this.expanded;
+            }
+        }
     }
 </script>
 
@@ -20,8 +41,8 @@
 .project-container{
     position: relative;
     overflow: hidden;
-    width: 25vw;
-    height: 25vw;
+    width: 23vw;
+    height: 23vw;
     cursor: pointer;
 }
 .project-container img{
@@ -51,6 +72,22 @@
     font-size: 30px;
     color: var(--psc-white);
     text-align: center;
+}
+
+.full-project-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.full-project-container img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }
 
 

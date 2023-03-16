@@ -59,7 +59,7 @@ h1 {
 }
 
 .project {
-    flex: 0 0 24%;
+    flex: 0 0 25%;
     margin: 0% 0% 1% 0%;
 }
 </style>
