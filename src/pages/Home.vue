@@ -27,6 +27,7 @@ export default {
       PrincipalDesignerImage,
       offsetTop: 0,
       inView: false,
+      offeringInView: false,
     }
   },
   setup() {
@@ -58,7 +59,6 @@ export default {
   },
   methods: {
     onScroll (e) {
-      console.log('scrolling')
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
     },
     isElementInViewport(el) {
@@ -75,6 +75,7 @@ export default {
       if (el) {
         if (this.isElementInViewport(el)) {
           this.inView = true;
+          setTimeout(() => {this.offeringInView = true;}, 300);
         } 
       }
     }
@@ -92,45 +93,47 @@ export default {
     
     <Transition>
       <section class="main-header text" v-show="inView">
-      <div class="text-wrapper">
-        <h1>
-          AN EXPERIENCED PRACTICE OF CHARTERED SURVEYORS, QUANTITY SURVEYORS, PROJECT MANAGERS,
-          BUILDING SURVEYORS & PRINCIPLE DESIGNERS BASED IN LEEDS SINCE 2011.
-        </h1>
-      </div>
-    </section>
+        <div class="text-wrapper">
+          <h1>
+            AN EXPERIENCED PRACTICE OF CHARTERED SURVEYORS, QUANTITY SURVEYORS, PROJECT MANAGERS,
+            BUILDING SURVEYORS & PRINCIPLE DESIGNERS BASED IN LEEDS SINCE 2011.
+          </h1>
+        </div>
+      </section>
     </Transition>
 
     <hr class="solid">
 
-    <section class="offerings">
-      <div class="offerings-wrapper">
-        <Offering
-          title="QUANTITY SURVEYING"
-          text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
-          link="/Quantity-Surveying"
-          :image="QuantitySurveyImage"
-        />
-        <Offering
-          title="PROJECT MANAGEMENT"
-          text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
-          link="/Project-Management"
-          :image="ProjectManagerImage"
-        />
-        <Offering
-          title="BUILDING SURVEYING"
-          text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
-          link="/Building-Surveying"
-          :image="BuildingSurveyingImage"
-        />
-        <Offering
-          title="PRINCIPAL DESIGNER"
-          text="We are a corporate member of the Association of Project Safety and work closely with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
-          link="/Principal-Designer"
-          :image="PrincipalDesignerImage"
-        />
-      </div>
-    </section>
+    <Transition name="slide">
+      <section class="offerings" v-show="offeringInView">
+        <div class="offerings-wrapper">
+          <Offering
+            title="QUANTITY SURVEYING"
+            text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
+            link="/Quantity-Surveying"
+            :image="QuantitySurveyImage"
+          />
+          <Offering
+            title="PROJECT MANAGEMENT"
+            text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
+            link="/Project-Management"
+            :image="ProjectManagerImage"
+          />
+          <Offering
+            title="BUILDING SURVEYING"
+            text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
+            link="/Building-Surveying"
+            :image="BuildingSurveyingImage"
+          />
+          <Offering
+            title="PRINCIPAL DESIGNER"
+            text="We are a corporate member of the Association of Project Safety and work closely with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
+            link="/Principal-Designer"
+            :image="PrincipalDesignerImage"
+          />
+        </div>
+      </section>
+    </Transition>
 
     <RecentProjectContainer :homePage="true"/>
 
@@ -197,6 +200,13 @@ export default {
 
 .v-enter-from, .v-leave-to {
     transform: scale(0.2);
+}
+.slide-enter-active, .slide-leave-active {
+    transition: all 0.7s;
+}
+
+.slide-enter-from, .slide-leave-to {
+    transform: translateX(100%);
 }
 
 @media (pointer:none), (pointer:coarse){
