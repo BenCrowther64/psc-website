@@ -25,6 +25,8 @@ export default {
       ProjectManagerImage,
       BuildingSurveyingImage,
       PrincipalDesignerImage,
+      offsetTop: 0,
+      inView: false,
     }
   },
   setup() {
@@ -42,6 +44,41 @@ export default {
     ContactDiv,
     RecentProjectContainer,
   },
+
+  created () {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.onScroll);
+  },
+  watch: {
+    offsetTop (val) {
+       this.callbackFunc()
+    }
+  },
+  methods: {
+    onScroll (e) {
+      console.log('scrolling')
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+    },
+    isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    },
+    callbackFunc() {
+      let el = document.querySelector(".main-header");
+      if (el) {
+        if (this.isElementInViewport(el)) {
+          this.inView = true;
+        } 
+      }
+    }
+  },
 }
 </script>
 
@@ -53,7 +90,8 @@ export default {
       <img id="main-branding" src = "../assets/images/branding/logo-base-ver-3-blue.png"/>
     </section>
     
-    <section class="main-header text">
+    <Transition>
+      <section class="main-header text" v-show="inView">
       <div class="text-wrapper">
         <h1>
           AN EXPERIENCED PRACTICE OF CHARTERED SURVEYORS, QUANTITY SURVEYORS, PROJECT MANAGERS,
@@ -61,6 +99,7 @@ export default {
         </h1>
       </div>
     </section>
+    </Transition>
 
     <hr class="solid">
 
@@ -124,7 +163,7 @@ export default {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(100,100,100);
+    background-color: rgb(255,255,255);
 }
  
 #main-branding{
@@ -150,6 +189,14 @@ export default {
 #name {
   color: var(--psc-dark-blue);
   font-weight: 500;
+}
+
+.v-enter-active, .v-leave-active {
+    transition: all 0.7s;
+}
+
+.v-enter-from, .v-leave-to {
+    transform: scale(0.2);
 }
 
 @media (pointer:none), (pointer:coarse){

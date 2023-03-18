@@ -4,23 +4,21 @@
   export default {
     data() {
       return {
-        isLoading: true,
+        loading: true,
       }
     },
     components: {
       Loading,
     },
-    mounted () {
-      setTimeout(() => {
-        this.isLoading = false
-      }, 3000)
-    }
-  }
+    mounted() {
+      setTimeout(() => {this.loading = false }, 2000)
+    },
+}
 </script>
 
 
 <template>
-  <Loading v-if="isLoading" />
+  <Loading :isLoading="loading"/>
 
   <router-view></router-view>
 </template>

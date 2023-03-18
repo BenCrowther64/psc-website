@@ -1,13 +1,37 @@
 <script>
     export default {
         emits: ["prev", "next"], 
+        data: () => ({
+            buttonCooldown : false
+        }),
+
+        methods: {
+            prev() {
+                if (!this.buttonCooldown) {
+                    this.$emit("prev");
+                    this.buttonCooldown = true;
+                    setTimeout(() => {
+                        this.buttonCooldown = false;
+                    }, 1000);
+                }
+            },
+            next() {
+                if (!this.buttonCooldown) {
+                    this.$emit("next");
+                    this.buttonCooldown = true;
+                    setTimeout(() => {
+                        this.buttonCooldown = false;
+                    }, 1000);
+                }
+            }
+        }
     };
 </script>
 
 <template>
-    <button class="carousel-control left" @click="$emit('prev')">
+    <button class="carousel-control left" @click="prev">
     </button> 
-    <button class="carousel-control right" @click="$emit('next')">
+    <button class="carousel-control right" @click="next">
     </button>
 </template>
 

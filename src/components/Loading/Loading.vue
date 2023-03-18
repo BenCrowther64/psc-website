@@ -1,12 +1,17 @@
 <template>
-    <div id="loading-screen">
+    <div :class="{ loading: true, fadeout: !isLoading}">
         <img src="../../assets/images/home/loading-state.gif">
-        <h3>LOADING</h3>
     </div>  
 </template>
 
+<script>
+    export default {
+    props: ["isLoading"]
+    };
+</script>
+
 <style scoped>
-    #loading-screen{
+    .loading{
         position: fixed;
         top: 0;
         left: 0;
@@ -16,7 +21,7 @@
         z-index: 2000;
     }
 
-    #loading-screen img{
+    .loading img{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -25,13 +30,14 @@
         height: 80px;
     }
 
-    #loading-screen h3{
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1rem;
-        color: var(--psc-dark-blue);
+    .fadeout {
+        animation: fadeout 1.2s forwards;
     }
 
+    @keyframes fadeout {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+    }
 </style>
