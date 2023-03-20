@@ -18,9 +18,7 @@ const routes = [
   {
     path: '/',
     component: Homepage,
-    name: "Home",
     meta: { title: 'PSC Surveying Ltd.' },
-    
   },
 
   {

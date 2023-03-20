@@ -11,8 +11,17 @@
       Loading,
     },
     mounted() {
-      setTimeout(() => {this.loading = false }, 2000)
+      if (this.$route.path === "/") {
+        setTimeout(() => {this.loading = false }, 2000)
+      } else {
+        this.loading = false
+      }
     },
+    watch: {
+      '$route': function(to, from) {
+        document.documentElement.style.overflow = 'auto'
+      }
+  }
 }
 </script>
 

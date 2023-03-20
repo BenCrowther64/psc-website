@@ -27,12 +27,12 @@ export default {
       QUANTITY SURVEYING, AND PRINCIPAL DESIGNER SERVICES, ENSURING THE SUCCESSFUL DELIVERY OF EACH PROJECT TO THE HIGHEST STANDARDS.</h1>
 
     <div class="project-type-container">
-      <ProjectType class = "project" projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType class = "project" projectType="DILAPIDATIONS" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType class = "project" projectType="BUILDING SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType class = "project" projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType class = "project" projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType class = "project" projectType="QUANTITY SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="DILAPIDATIONS" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="BUILDING SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="QUANTITY SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
     </div>
 
     <Footer></Footer>
@@ -50,16 +50,10 @@ h1 {
 
 .project-type-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: left;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0 1%;
+  align-items: space-around;
   gap: 1%;
-}
-
-.project {
-    flex: 0 0 24%;
-    margin: 0% 0% 1% 0%;
+  margin: 1% 1% 0 1%;
 }
 </style>

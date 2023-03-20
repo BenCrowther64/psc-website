@@ -15,6 +15,16 @@ export default{
             type: Boolean,
             default: false
         }
+    },
+    watch: {
+        show: function() {
+        if(this.show){
+            document.documentElement.style.overflow = 'hidden'
+            return
+        }
+
+        document.documentElement.style.overflow = 'auto'
+        }
     }
 };
 </script>
@@ -27,14 +37,14 @@ export default{
         <div class = full-screen v-if="show" @toggle="toggleNavScreen">
             <button class="nav-screen-button close" @click="toggleNavScreen()"></button>
             <div class="link-wrapper">
-                <router-link to="/">HOME</router-link>
-                <router-link to="/People">PEOPLE</router-link>
-                <router-link to="/Quantity-Surveying">QUANTITY SURVEYING</router-link>
-                <router-link to="/Building-Surveying">BUILDING SURVEYING</router-link>
-                <router-link to="/Project-Management">PROJECT MANAGEMENT</router-link>
-                <router-link to="/Principal-Designer">PRINCIPAL DESIGNER</router-link>
-                <router-link to="/Projects">PROJECTS</router-link>
-                <router-link to="/Contact">CONTACT</router-link>
+                <router-link to="/" @click="toggleNavScreen">HOME</router-link>
+                <router-link to="/People" @click="toggleNavScreen">PEOPLE</router-link>
+                <router-link to="/Quantity-Surveying" @click="toggleNavScreen">QUANTITY SURVEYING</router-link>
+                <router-link to="/Building-Surveying" @click="toggleNavScreen">BUILDING SURVEYING</router-link>
+                <router-link to="/Project-Management" @click="toggleNavScreen">PROJECT MANAGEMENT</router-link>
+                <router-link to="/Principal-Designer" @click="toggleNavScreen">PRINCIPAL DESIGNER</router-link>
+                <router-link to="/Projects" @click="toggleNavScreen">PROJECTS</router-link>
+                <router-link to="/Contact" @click="toggleNavScreen">CONTACT</router-link>
             </div>
         </div>
     </Transition>

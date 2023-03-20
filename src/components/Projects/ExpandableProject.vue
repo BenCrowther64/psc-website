@@ -1,26 +1,9 @@
-<template>
-
-    <div class="project-container" @click="expand">
-        <img :src="image">
-        <div class="text-container">
-            <h1>{{ projectName }}</h1>
-        </div>
-    </div>
-
-    <div v-if="expanded" class="full-project-container" @click="expand">
-        <img :src="image">
-        <div class="full-text-container">
-            <h1>{{ projectName }}</h1>
-        </div>
-    </div>
-
-</template>
-
 <script>
     export default{
         props: {
             image: String,
             projectName: String,
+            content: String,
         },
 
         data() {
@@ -32,20 +15,57 @@
         methods: {
             expand() {
                 this.expanded = !this.expanded;
+            },
+        },
+
+        watch: {
+            expanded: function() {
+            if(this.expanded){
+                document.documentElement.style.overflow = 'hidden'
+                return
+            }
+
+            document.documentElement.style.overflow = 'auto'
             }
         }
     }
 </script>
 
+<template>
+
+    <div class="project-container" @click="expand">
+        <img :src="image">
+        <div class="text-container">
+            <h1>{{ projectName }}</h1>
+        </div>
+    </div>
+
+    <Transition name="nested" :duration="550">
+        <div v-if="expanded" class="full-project-container">
+            <div class = "content-wrapper">
+                <img :src="image">
+                <div class="full-text-container">
+                    <h1>{{ projectName }}</h1>
+                    <span>{{ content }}</span>
+                </div>
+                <button @click="expand">CLOSE</button>
+            </div>
+        </div>
+    </Transition>
+
+</template>
+
 <style scoped>
 .project-container{
-    position: relative;
+    flex: 0 0 24.25%;
+    height: 24.25vw;
+    margin: 0 0 1% 0;
     overflow: hidden;
-    width: 23vw;
-    height: 23vw;
     cursor: pointer;
 }
+
 .project-container img{
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -57,37 +77,98 @@
 }
 
 .text-container{
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 .text-container h1{
+    color: var(--psc-white);
+    margin: 0;
+    font-size: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: var(--psc-white);
-    text-align: center;
 }
 
 .full-project-container{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    cursor: pointer;
+    width: 100%;
     z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
 }
 
-.full-project-container img{
-    width: 50%;
-    height: 100%;
+.content-wrapper {
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.content-wrapper img{
+    width: 35vw;
+    height: 70vh;
     object-fit: cover;
+}
+
+.full-text-container {
+    width: 35vw;
+    padding: 0 1vw;
+    background-color: var(--psc-light-gray);
+    white-space: pre-line;
+}
+
+.full-text-container h1 {
+    color: var(--psc-dark-blue);
+}
+
+.content-wrapper button {
+    width: 4vw;
+    background: var(--psc-dark-blue);
+    color: var(--psc-white);
+    border-radius: 20px;
+    margin: 0.5vw;
+    border: none;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    cursor: pointer;
+    height: 5vh;
+}
+
+.nested-enter-active .content-wrapper,
+.nested-leave-active .content-wrapper{
+  transition-delay: 0.25s;
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-enter-from .content-wrapper,
+.nested-leave-to .content-wrapper {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.nested-enter-active .full-project-container,
+.nested-leave-active .full-project-container{
+  transition: all 0.3s;
+}
+
+.nested-enter-from .full-project-container,
+.nested-leave-to .full-project-container {
+  opacity: 0;
 }
 
 

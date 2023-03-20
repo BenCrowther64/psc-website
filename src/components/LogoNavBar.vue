@@ -12,7 +12,7 @@ export default {
 
 <template>
     <div class = "top-wrapper">
-        <NavScreen darkMode="true"/>
+        <NavScreen :darkMode="true"/>
         <HomeImageLink></HomeImageLink>
     </div>  
 </template>
