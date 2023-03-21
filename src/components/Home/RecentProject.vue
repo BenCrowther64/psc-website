@@ -1,6 +1,6 @@
 <template>
     <div @mouseover="hover = true" @mouseleave="hover = false" :class="[isLong ? 'long-project-container' : 'project-container']">
-        <router-link :to="'/Projects/' + projectName">
+        <router-link :to="'/' + name">
             <img :src="image">
             <Transition>
                 <div v-if="hover" class="text-container">
@@ -21,9 +21,15 @@
         data() {
             return {
                 hover: false,
+                name: this.join(this.projectName)
             }
-        }
-
+        },
+        methods: {
+            join(str) {
+                str = str.replace(/\s/g, '-')
+                return str
+            }
+        },
     }
 </script>
 

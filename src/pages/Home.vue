@@ -27,7 +27,7 @@ export default {
       PrincipalDesignerImage,
       offsetTop: 0,
       inView: false,
-      offeringInView: false,
+      offeringShow: [false, false, false, false]
     }
   },
   setup() {
@@ -48,18 +48,20 @@ export default {
 
   created () {
     window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('touchmove', this.onScroll);
   },
   destroyed () {
     window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('touchmove', this.onScroll);
   },
   watch: {
     offsetTop (val) {
        this.callbackFunc()
-    }
+    },
   },
   methods: {
     onScroll (e) {
-      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
     },
     isElementInViewport(el) {
       var rect = el.getBoundingClientRect();
@@ -75,7 +77,9 @@ export default {
       if (el) {
         if (this.isElementInViewport(el)) {
           this.inView = true;
-          setTimeout(() => {this.offeringInView = true;}, 300);
+          for (let i = 0; i < 4; i++) {
+            setTimeout(() => {this.offeringShow[i] = true;}, i * 500);
+          }
         } 
       }
     }
@@ -104,36 +108,38 @@ export default {
 
     <hr class="solid">
 
-    <Transition name="slide">
-      <section class="offerings" v-show="offeringInView">
-        <div class="offerings-wrapper">
-          <Offering
-            title="QUANTITY SURVEYING"
-            text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
-            link="/Quantity-Surveying"
-            :image="QuantitySurveyImage"
-          />
-          <Offering
-            title="PROJECT MANAGEMENT"
-            text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
-            link="/Project-Management"
-            :image="ProjectManagerImage"
-          />
-          <Offering
-            title="BUILDING SURVEYING"
-            text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
-            link="/Building-Surveying"
-            :image="BuildingSurveyingImage"
-          />
-          <Offering
-            title="PRINCIPAL DESIGNER"
-            text="We are a corporate member of the Association of Project Safety and work closely with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
-            link="/Principal-Designer"
-            :image="PrincipalDesignerImage"
-          />
-        </div>
-      </section>
-    </Transition>
+    <section class="offerings">
+      <div class="offerings-wrapper">
+        <Offering 
+          title="QUANTITY SURVEYING"
+          text="Projects range from the preperation of cost plans at the feasability stage for small house building to construction, new build and refurbishment of residential, commercial and industrial properties."
+          link="/Quantity-Surveying"
+          :image="QuantitySurveyImage"
+          :visible="offeringShow[0]"
+        />
+        <Offering 
+          title="PROJECT MANAGEMENT"
+          text="We have a wealth of experience in the procurement and delivery of retail, leisure, commercial, office and residential schemes throughout the United Kingdom."
+          link="/Project-Management"
+          :image="ProjectManagerImage"
+          :visible="offeringShow[1]"
+        />
+        <Offering 
+          title="BUILDING SURVEYING"
+          text="Our services include residential and commercial surveys for aquisition, occupation, disposal or development. We act for landlords & tenants in dilapidations and carry out work under the Party Wall etc Act 1996."
+          link="/Building-Surveying"
+          :image="BuildingSurveyingImage"
+          :visible="offeringShow[2]"
+        />
+        <Offering 
+          title="PRINCIPAL DESIGNER"
+          text="We are a corporate member of the Association of Project Safety and work closely with multi-disciplinary design teams to ensure the design risk management process under the CDM 2015 Regulation."
+          link="/Principal-Designer"
+          :image="PrincipalDesignerImage"
+          :visible="offeringShow[3]"
+        />
+      </div>
+    </section>
 
     <RecentProjectContainer :homePage="true"/>
 
@@ -185,6 +191,7 @@ export default {
   max-width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: left;
   margin: 1%;
   gap: 1%;
 }
@@ -200,13 +207,6 @@ export default {
 
 .v-enter-from, .v-leave-to {
     transform: scale(0.2);
-}
-.slide-enter-active, .slide-leave-active {
-    transition: all 0.7s;
-}
-
-.slide-enter-from, .slide-leave-to {
-    transform: translateX(100%);
 }
 
 @media (pointer:none), (pointer:coarse){

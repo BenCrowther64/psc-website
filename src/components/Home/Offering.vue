@@ -1,102 +1,98 @@
 <template>
-    <div class="offering-header">
-        <router-link :to="link">
-            <div class="text-wrapper">
-                <div class = "image-container">
+
+    <Transition name="slide">
+        
+        <div class="offering-header" v-show="visible">
+            <router-link :to="link">
+                <div class="img-container">
                     <img :src="image">
                 </div>
                 <h1>{{ title }}</h1>
                 <p>{{ text }}</p>
-            </div>
-        </router-link>
-    </div>
+            </router-link>
+        </div>
+
+    </Transition>
+
 </template>
 
 <script>
 export default {
-    props: ["title", "text", "link", "image"],
+    props: ["title", "text", "link", "image", "visible"],
 };
 </script>
 
 <style scoped>
 .offering-header {
-    width: 24%;
-    flex-grow: 1;
-    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    text-align: left;
+    transition: all .3s ease;
+    flex: 0 0 23vw;
 }
 
 .offering-header:hover{
     cursor: pointer;
+    transform: translate(0, -8px);
 }
 
-.text-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    transition: all .3s ease;
-    vertical-align: middle;
+.offering-header:hover img {
+    transform: scale(1.05,1.05);
 }
 
-.text-wrapper h1 {
+.offering-header h1 {
     color:var(--psc-dark-blue);
     font-size: 30px;
     margin: 10px 0px;
 }
 
-.text-wrapper p {
+.offering-header p {
     font-size: 15px;
     margin: 0px;;
 }
 
-.image-container{
-  width: 100%;
-  overflow: hidden;
+.img-container {
+    overflow: hidden;
 }
 
-.image-container img{
+.img-container img{
     width: 23.6vw;
     height: 23.6vw;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
 
-.text-wrapper:hover{
-    transform: translate(0, -8px);
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .8s ease-in-out;
 }
 
-.text-wrapper:hover img{
-    transform: scale(1.05,1.05);
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(-20%);
+  opacity: 0;
 }
 
 @media (pointer:none), (pointer:coarse){
-    .text-wrapper:hover{
-        transform: translate(0, -5px);
+    .offering-header {
+        flex: 0 0 100%;
     }
-
-    .offering-header{
+    .img-container img{
+        vertical-align: top;
         width: 100%;
+        height: 20vh;
     }
-
-    .image-container img{
-        width: 99vw;
-        height: 99vw;
-    }
-  }
-
+}
 
 @media (max-width: 738px) {
-    .text-wrapper:hover{
-        transform: translate(0, -5px);
+    .offering-header {
+        flex: 0 0 100%;
     }
-
-    .offering-header{
+    .img-container img{
         width: 100%;
-    }
-
-    .image-container img{
-        width: 99vw;
-        height: 99vw;
+        height: 40vh;
     }
 }
 

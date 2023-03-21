@@ -4,25 +4,25 @@
   export default {
     data() {
       return {
-        loading: true,
+        loading: false,
       }
     },
     components: {
       Loading,
     },
-    mounted() {
-      if (this.$route.path === "/") {
-        setTimeout(() => {this.loading = false }, 2000)
-      } else {
-        this.loading = false
-      }
-    },
     watch: {
       '$route': function(to, from) {
+        console.log(to.fullPath)
+        if (to.fullPath === "/") {
+          this.loading = true
+          setTimeout(() => {this.loading = false }, 1500)
+        } else {
+          this.loading = false
+        }
         document.documentElement.style.overflow = 'auto'
       }
+    },
   }
-}
 </script>
 
 
@@ -31,3 +31,4 @@
 
   <router-view></router-view>
 </template>
+

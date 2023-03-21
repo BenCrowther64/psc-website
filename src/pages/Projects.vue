@@ -56,4 +56,25 @@ h1 {
   gap: 1%;
   margin: 1% 1% 0 1%;
 }
+
+
+@media (pointer:none), (pointer:coarse) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .project-type-container {
+        flex-flow: column wrap;
+    }
+}
+
+@media (max-width: 738px){
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .project-type-container {
+        flex-flow: column wrap;
+    }
+}
 </style>

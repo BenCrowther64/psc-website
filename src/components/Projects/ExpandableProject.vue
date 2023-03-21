@@ -4,6 +4,10 @@
             image: String,
             projectName: String,
             content: String,
+            whiteCross : {
+                type: Boolean,
+                default: false
+            }
         },
 
         data() {
@@ -46,9 +50,9 @@
                 <img :src="image">
                 <div class="full-text-container">
                     <h1>{{ projectName }}</h1>
-                    <span>{{ content }}</span>
+                    <p>{{ content }}</p>
                 </div>
-                <button @click="expand">CLOSE</button>
+                <div class="close" :class="[whiteCross? 'white' : 'black']" @click="expand"></div>
             </div>
         </div>
     </Transition>
@@ -107,7 +111,7 @@
 }
 
 .content-wrapper {
-    border-radius: 20px;
+    border: solid 8px var(--psc-dark-blue);
     display: flex;
     position: relative;
     top: 50%;
@@ -126,27 +130,37 @@
 
 .full-text-container {
     width: 35vw;
-    padding: 0 1vw;
     background-color: var(--psc-light-gray);
     white-space: pre-line;
 }
 
 .full-text-container h1 {
+    padding: 2%;
     color: var(--psc-dark-blue);
 }
 
-.content-wrapper button {
-    width: 4vw;
-    background: var(--psc-dark-blue);
-    color: var(--psc-white);
-    border-radius: 20px;
+.full-text-container p{
+    padding: 2%;
+}
+
+.close {
+    width: 2.5vh;
+    height: 2.5vh;
     margin: 0.5vw;
     border: none;
     position: absolute;
     right: 0%;
     top: 0%;
     cursor: pointer;
-    height: 5vh;
+    background-size: 100%;
+}
+
+.black {
+    background-image: url("../../assets/images/home/close.png")
+}
+
+.white {
+    background-image: url("../../assets/images/home/close-white.png")
 }
 
 .nested-enter-active .content-wrapper,
@@ -173,25 +187,69 @@
 
 
 @media (pointer:none), (pointer:coarse) {
-    .project-container:hover{
-        transform: translate(0, -2px);
+    .project-container{
+        flex: 0 0 100%;
+        height: 40vh;
     }
 
-    .project-container{
-        width: 49%;
-        height: 20vh;
+    .text-container h1{
+        font-size: 1.8em;
+    }
+
+    .content-wrapper{
+        flex-direction: column;
+    }
+
+    .content-wrapper img{
+        width: 100%;
+        height: 30vh;
+    }
+
+    .full-text-container {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .full-text-container h1 {
+        font-size: 1.4em;
+    }
+    .full-text-container p {
+        font-size: .8em;
     }
 }
 
 @media (max-width: 738px)
 {
-    .project-container:hover{
-        transform: translate(0, -2px);
+    .project-container{
+        flex: 0 0 100%;
+        height: 40vh;
     }
 
-    .project-container{
-        width: 49%;
-        height: 20vh;
+    .text-container h1{
+        font-size: 1.8em;
+    }
+
+    .content-wrapper{
+        flex-direction: column;
+    }
+
+    .content-wrapper img{
+        width: 100%;
+        height: 30vh;
+    }
+
+    .full-text-container {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .full-text-container h1 {
+        font-size: 1.4em;
+    }
+    .full-text-container p {
+        font-size: .8em;
     }
 }
 </style>

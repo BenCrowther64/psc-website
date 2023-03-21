@@ -1,6 +1,6 @@
 <script>
-import Footer from '../components/Footer.vue';
-import TopBannerImage from '../components/TopBannerImage.vue';
+import Footer from '../../../components/Footer.vue';
+import TopBannerImage from '../../../components/TopBannerImage.vue';
 
 export default {
   components: {

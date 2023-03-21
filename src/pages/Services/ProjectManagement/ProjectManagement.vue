@@ -1,9 +1,9 @@
 <script>
-import Footer from '../components/Footer.vue';
-import TopBannerImage from '../components/TopBannerImage.vue';
-import RecentProjectContainer from '../components/Home/RecentProjectContainer.vue';
+import Footer from '../../../components/Footer.vue';
+import TopBannerImage from '../../../components/TopBannerImage.vue';
+import RecentProjectContainer from '../../../components/Home/RecentProjectContainer.vue';
 
-import OfferingImage1 from '../assets/images/home/offering1.jpg';
+import OfferingImage1 from '../../../assets/images/home/offering1.jpg';
 
 export default {
   components: {

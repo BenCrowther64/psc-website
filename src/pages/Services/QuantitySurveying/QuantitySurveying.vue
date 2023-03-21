@@ -1,9 +1,9 @@
 <script>
-import Footer from '../components/Footer.vue';
-import TopBannerImage from '../components/TopBannerImage.vue';
-import RecentProjectContainer from '../components/Home/RecentProjectContainer.vue';
+import Footer from '../../../components/Footer.vue';
+import TopBannerImage from '../../../components/TopBannerImage.vue';
+import RecentProjectContainer from '../../../components/Home/RecentProjectContainer.vue';
 
-import Banner from '../assets/images/services/building-surveying/banner.jpg';
+import OfferingImage1 from '../../../assets/images/home/offering1.jpg';
 
 export default {
   components: {
@@ -14,19 +14,19 @@ export default {
 
   data() {
     return {
-      Banner,
+      OfferingImage1,
     }
   },
 }
 </script>
 
 <template>
-    <TopBannerImage text = "BUILDING SURVEYING" :image="Banner" :dark="true"></TopBannerImage>
+    <TopBannerImage text = "QUANTITY SURVEYING"></TopBannerImage>
 
     <div class = bs-heading>
       <h1>
-        WITH EXTENSIVE EXPERIENCE ACROSS A WIDE RANGE OF PRIVATE AND PUBLIC SECTORS, OUR EXPERT BUILDING SURVEYING TEAM OFFERS DETAILED INSPECTIONS AND SURVEYS TO ASSESS 
-        THE CONDITION OF A BUILDING'S STRUCTURE ENSURING THE SAFETY, INTEGRITY, AND VALUE OF YOUR PROPERTY.
+        WITH YEARS OF EXPERIENCE ACROSS VARIOUS INDUSTRIES AND PROJECT TYPES, OUR TEAM OF EXPERT QUANTITY SURVEYORS OFFERS PRECISE ESTIMATIONS AND COST PLANNING SERVICES 
+        TO ENSURE THE FINANCIAL SUCCESS AND EFFICIENCY OF YOUR CONSTRUCTION PROJECT.
       </h1>
     </div>
 
@@ -34,21 +34,21 @@ export default {
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Dilapidations/'>
           <div class = bs-offering>
-            DILAPIDATIONS
+            EXAMPLE 1
           </div>
         </router-link>
       </div>
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Party-Wall/'>
           <div class = bs-offering>
-            PARTY WALL
+            EXAMPLE 2
           </div>
         </router-link>
       </div>
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Surveying/'>
           <div class = bs-offering>
-            SURVEYING
+            EXAMPLE 3
           </div>
         </router-link>
       </div>
@@ -131,3 +131,4 @@ export default {
     }
 }
 </style>
+

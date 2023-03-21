@@ -1,13 +1,13 @@
 <script>
-import Footer from '../../../components/Footer.vue';
-import LogoNavBar from '../../../components/LogoNavBar.vue';
-import ExpandableProject from '../../../components/Projects/ExpandableProject.vue';
+import Footer from '../../components/Footer.vue';
+import LogoNavBar from '../../components/LogoNavBar.vue';
+import ExpandableProject from '../../components/Projects/ExpandableProject.vue';
 
-import Project1 from '../../../assets/images/projects/party-wall/image1.jpg';
-import Project2 from '../../../assets/images/projects/party-wall/image2.jpg';
-import Project3 from '../../../assets/images/projects/party-wall/image3.png';
-import Project4 from '../../../assets/images/projects/party-wall/image4.jpg';
-import Project5 from '../../../assets/images/projects/party-wall/image5.jpg';
+import Project1 from '../../assets/images/projects/party-wall/image1.jpg';
+import Project2 from '../../assets/images/projects/party-wall/image2.jpg';
+import Project3 from '../../assets/images/projects/party-wall/image3.png';
+import Project4 from '../../assets/images/projects/party-wall/image4.jpg';
+import Project5 from '../../assets/images/projects/party-wall/image5.jpg';
 
 export default {
   components: {

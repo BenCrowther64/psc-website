@@ -21,6 +21,7 @@
 
 <style scoped>
 .project-container{
+    position: relative;
     flex: 0 0 24.25%;
     height: 24.25vw;
     margin: 0 0 1% 0;
@@ -28,7 +29,6 @@
 }
 
 .project-container img{
-    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -40,45 +40,45 @@
 }
 
 .text-container{
-    position: relative;
-    top: -100%;
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .text-container h1{
+    width: 50%;
     color: var(--psc-white);
     margin: 0;
     font-size: 1.5vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 
 @media (pointer:none), (pointer:coarse) {
-    .project-container:hover{
-        transform: translate(0, -2px);
+    .project-container{
+        flex: 0 0 100%;
+        height: 40vh;
     }
 
-    .project-container{
-        width: 49%;
-        height: 20vh;
+    .text-container h1{
+        font-size: 1.8em;
     }
 }
 
 @media (max-width: 738px)
 {
-    .project-container:hover{
-        transform: translate(0, -2px);
+    .project-container{
+        flex: 0 0 100%;
+        height: 40vh;
     }
 
-    .project-container{
-        width: 49%;
-        height: 20vh;
+    .text-container h1{
+        font-size: 1.8em;
     }
 }
 </style>

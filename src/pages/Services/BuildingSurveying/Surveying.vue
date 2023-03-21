@@ -1,28 +1,20 @@
 <script>
-import Footer from '../../components/Footer.vue';
-import TopBannerImage from '../../components/TopBannerImage.vue';
-
-import Banner from '../../assets/images/services/building-surveying/party-wall/banner.jpg';
+import Footer from '../../../components/Footer.vue';
+import TopBannerImage from '../../../components/TopBannerImage.vue';
 
 export default {
   components: {
     Footer,
     TopBannerImage,
   },
-
-  data() {
-    return {
-      Banner,
-    }
-  },
 }
 </script>
 
 <template>
-    <TopBannerImage text="PARTY WALL" :image="Banner" :dark="true" :logo-colour="1"></TopBannerImage>
+    <TopBannerImage text="SURVEYING"></TopBannerImage>
 
     <div class = text-wrapper>
-      <h1>THE PARTY WALL ETC ACT 1996 & NEIGHBOURLY MATTERS</h1>
+      <h1>BUILDING SURVEYING SERVICES</h1>
       <p>
         Our party wall services are delivered by Stephen Crowther MRICS, CMaPS, Tech IOSH, who is a Director of PSC Surveying Ltd, a Chartered Building Surveyor and a member of The Pyramus & Thisbe Society. 
       </p>
