@@ -210,10 +210,12 @@
     }
 
     .full-text-container h1 {
-        font-size: 1.4em;
+        margin: 0;
+        font-size: 2.2vmax;
     }
     .full-text-container p {
-        font-size: .8em;
+        margin: 0;
+        font-size: 1.7vmax;
     }
 
     .black {
@@ -256,10 +258,12 @@
     }
 
     .full-text-container h1 {
-        font-size: 1.4em;
+        margin: 0;
+        font-size: 2.2vmax;
     }
     .full-text-container p {
-        font-size: .8em;
+        margin: 0;
+        font-size: 1.7vmax;
     }
 
     .black {
@@ -268,6 +272,22 @@
 
     .white {
         background-image: url("../../assets/images/home/close-white.png")
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .full-text-container p {
+        margin: 0;
+        font-size: 1.2vmax;
+    }
+}
+
+@media (min-width: 1280px)
+{
+    .full-text-container p {
+        margin: 0;
+        font-size: 1.2vmax;
     }
 }
 </style>
