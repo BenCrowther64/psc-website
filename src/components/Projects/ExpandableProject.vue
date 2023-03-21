@@ -120,6 +120,7 @@
     width: 70vw;
     height: 70vh;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .content-wrapper img{
@@ -153,14 +154,7 @@
     top: 0%;
     cursor: pointer;
     background-size: 100%;
-}
-
-.black {
     background-image: url("../../assets/images/home/close.png")
-}
-
-.white {
-    background-image: url("../../assets/images/home/close-white.png")
 }
 
 .nested-enter-active .content-wrapper,
@@ -200,6 +194,10 @@
         flex-direction: column;
     }
 
+    .close{
+        margin: 1.2vw
+    }
+
     .content-wrapper img{
         width: 100%;
         height: 30vh;
@@ -216,6 +214,14 @@
     }
     .full-text-container p {
         font-size: .8em;
+    }
+
+    .black {
+        background-image: url("../../assets/images/home/close.png")
+    }
+
+    .white {
+        background-image: url("../../assets/images/home/close-white.png")
     }
 }
 
@@ -239,6 +245,10 @@
         height: 30vh;
     }
 
+    .close{
+        margin: 1.2vw
+    }
+
     .full-text-container {
         text-align: center;
         width: 100%;
@@ -250,6 +260,14 @@
     }
     .full-text-container p {
         font-size: .8em;
+    }
+
+    .black {
+    background-image: url("../../assets/images/home/close.png")
+    }
+
+    .white {
+        background-image: url("../../assets/images/home/close-white.png")
     }
 }
 </style>

@@ -61,7 +61,7 @@ export default {
 
     <div class="project-type-container">
         <ExpandableProject  :projectName="Merrion.title" :image="Merrion.image" :content="Merrion.description"/>
-        <ExpandableProject  :projectName="Millbank.title" :image="Millbank.image" :content="Millbank.description"/>
+        <ExpandableProject  :projectName="Millbank.title" :image="Millbank.image" :content="Millbank.description" :whiteCross="true"/>
         <ExpandableProject  :projectName="Dormer.title" :image="Dormer.image" :content="Dormer.description"/>
         <ExpandableProject  :projectName="Excavation.title" :image="Excavation.image" :content="Excavation.description"/>
         <ExpandableProject  :projectName="York.title" :image="York.image" :content="York.description"/>
