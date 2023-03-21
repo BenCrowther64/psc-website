@@ -8,7 +8,6 @@ import './assets/main.css'
 
 const router = createRouter(createWebHistory())
 router.beforeEach((to, from, next) => {
-    console.log(to);
     document.title = to.meta.title;
     next();
   });

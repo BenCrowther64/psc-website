@@ -12,7 +12,6 @@
     },
     watch: {
       '$route': function(to, from) {
-        console.log(to.fullPath)
         if (to.fullPath === "/") {
           this.loading = true
           setTimeout(() => {this.loading = false }, 1500)
