@@ -99,31 +99,31 @@ const routes = [
   {
     path: '/:name/',
     component: FullPageProject,
-    meta: { title: 'Case Study: PSC Surveying Ltd.' },
+    meta: { title: 'Case Study - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Building-Surveying/:name/',
     component: FullPageProject,
-    meta: { title: 'Case Study: PSC Surveying Ltd.' },
+    meta: { title: 'Case Study - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Project-Management/:name/',
     component: FullPageProject,
-    meta: { title: 'Case Study: PSC Surveying Ltd.' },
+    meta: { title: 'Case Study - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Quantity-Surveying/:name/',
     component: FullPageProject,
-    meta: { title: 'Case Study: PSC Surveying Ltd.' },
+    meta: { title: 'Case Study - PSC Surveying Ltd.' },
   },
 
   {
     path: '/Principal-Designer/:name/',
     component: FullPageProject,
-    meta: { title: 'Case Study: PSC Surveying Ltd.' },
+    meta: { title: 'Case Study - PSC Surveying Ltd.' },
   },
 ]
 
