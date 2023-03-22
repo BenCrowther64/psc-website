@@ -78,7 +78,7 @@ export default {
         if (this.isElementInViewport(el)) {
           this.inView = true;
           for (let i = 0; i < 4; i++) {
-            setTimeout(() => {this.offeringShow[i] = true;}, i * 500);
+            setTimeout(() => {this.offeringShow[i] = true;}, i * 400);
           }
         } 
       }
