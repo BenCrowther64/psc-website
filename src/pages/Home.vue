@@ -141,7 +141,7 @@ export default {
       </div>
     </section>
 
-    <RecentProjectContainer :homePage="true"/>
+    <RecentProjectContainer/>
 
     <ContactDiv />
 

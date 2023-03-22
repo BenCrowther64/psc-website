@@ -84,6 +84,7 @@
 
 .text-container h1{
     vertical-align: middle;
+    text-transform: uppercase;
     color: white;
 }
 

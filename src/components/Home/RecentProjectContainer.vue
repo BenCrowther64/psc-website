@@ -22,10 +22,6 @@ export default {
         }
     },
     props:{
-        homePage: {
-            type: Boolean,
-            default: false,
-        },
         route: {
             type: String,
             default: "",
@@ -36,8 +32,8 @@ export default {
 
 <template>
     <section class="recent-projects">
-        <h1 v-if="homePage">RECENT PROJECTS...</h1>
-        <p v-if="homePage">Some recent projects worked on by <span id="name">PSC Surveying Ltd.</span></p>
+        <h1>RECENT PROJECTS...</h1>
+        <p>Some recent projects worked on by <span id="name">PSC Surveying Ltd.</span></p>
         <div class = "projects-wrapper">
           <RecentProject
             :image="img1"
