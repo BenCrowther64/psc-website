@@ -1,25 +1,27 @@
 import {createRouter} from 'vue-router'
+
+//Main Pages
 import Homepage from './Home.vue';
 import Projects from './Projects.vue';
-import BuildingSurveying from './Services/BuildingSurveying/BuildingSurveying.vue';
 import Contact from './Contact.vue';
 import People from './People.vue';
+
+//Services
+import BuildingSurveying from './Services/BuildingSurveying/BuildingSurveying.vue';
 import PrincipalDesigner from './Services/PrincipalDesigner/PrincipalDesigner.vue';
 import ProjectManagement from './Services/ProjectManagement/ProjectManagement.vue';
 import QuantitySurveying from './Services/QuantitySurveying/QuantitySurveying.vue';
 
+//Building Surveying
 import Dilapidations from './Services/BuildingSurveying/Dilapidations.vue';
 import PartyWall from './Services/BuildingSurveying/PartyWallService.vue';
 import Surveying from './Services/BuildingSurveying/Surveying.vue'
 
+//Building Surveying Projects
 import PartyWallProjects from './Projects/PartyWall.vue';
 
-import FrontPageProject1 from './Projects/FrontPageProjects/Project1.vue';
-import FrontPageProject2 from './Projects/FrontPageProjects/Project2.vue';
-import FrontPageProject3 from './Projects/FrontPageProjects/Project3.vue';
-import FrontPageProject4 from './Projects/FrontPageProjects/Project4.vue';
-import FrontPageProject5 from './Projects/FrontPageProjects/Project5.vue';
-import FrontPageProject6 from './Projects/FrontPageProjects/Project6.vue';
+//Front Page Full Page Project
+import FullPageProject from './Projects/FullPageProject.vue';
 
 const routes = [
   {
@@ -94,41 +96,34 @@ const routes = [
     meta: { title: 'Party Wall Projects - PSC Surveying Ltd.' },
   },
 
-
   {
-    path: '/Project-1/',
-    component: FrontPageProject1,
-    meta: { title: 'Project 1 - PSC Surveying Ltd.' },
+    path: '/Project-:id/',
+    component: FullPageProject,
+    meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Project-2/',
-    component: FrontPageProject2,
-    meta: { title: 'Project 2 - PSC Surveying Ltd.' },
+    path: '/Building-Surveying/Project-:id/',
+    component: FullPageProject,
+    meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Project-3/',
-    component: FrontPageProject3,
-    meta: { title: 'Project 3 - PSC Surveying Ltd.' },
+    path: '/Project-Management/Project-:id/',
+    component: FullPageProject,
+    meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Project-4/',
-    component: FrontPageProject4,
-    meta: { title: 'Project 4 - PSC Surveying Ltd.' },
+    path: '/Quantity-Surveying/Project-:id/',
+    component: FullPageProject,
+    meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Project-5/',
-    component: FrontPageProject5,
-    meta: { title: 'Project 5 - PSC Surveying Ltd.' },
-  },
-
-  {
-    path: '/Project-6/',
-    component: FrontPageProject6,
-    meta: { title: 'Project 6 - PSC Surveying Ltd.' },
+    path: '/Principal-Designer/Project-:id/',
+    component: FullPageProject,
+    meta: { title: 'PSC Surveying Ltd.' },
   },
 ]
 

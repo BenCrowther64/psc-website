@@ -1,6 +1,6 @@
 <template>
     <div @mouseover="hover = true" @mouseleave="hover = false" :class="[isLong ? 'long-project-container' : 'project-container']">
-        <router-link :to="'/' + name">
+        <router-link :to="'/' + extraRoute + name">
             <img :src="image">
             <Transition>
                 <div v-if="hover" class="text-container">
@@ -16,7 +16,8 @@
         props: {
             image: String,
             projectName: String,
-            isLong: Boolean
+            isLong: Boolean,
+            extraRoute: String,
         },
         data() {
             return {

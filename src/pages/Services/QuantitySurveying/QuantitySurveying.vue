@@ -56,7 +56,7 @@ export default {
 
     <hr class="solid">
 
-    <RecentProjectContainer :homePage="false" />
+    <RecentProjectContainer :homePage="false" route="Quantity-Surveying/"/>
 
     <Footer></Footer>
 </template>

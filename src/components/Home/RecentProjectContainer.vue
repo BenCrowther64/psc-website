@@ -1,6 +1,11 @@
 <script>
 import RecentProject from '../../components/Home/RecentProject.vue';
-import OfferingImage1 from '../../assets/images/home/offering1.jpg';
+import img1 from '../../assets/images/projects/full-page-images/image1.jpg';
+import img2 from '../../assets/images/projects/full-page-images/image2.jpg';
+import img3 from '../../assets/images/projects/full-page-images/image3.png';
+import img4 from '../../assets/images/projects/full-page-images/image4.jpg';
+import img5 from '../../assets/images/projects/full-page-images/image5.jpg';
+import img6 from '../../assets/images/projects/full-page-images/image6.jpg';
 
 export default {
     components: {
@@ -8,7 +13,12 @@ export default {
     },
     data() {
         return {
-            OfferingImage1,
+            img1,
+            img2,
+            img3,
+            img4,
+            img5,
+            img6,
         }
     },
     props:{
@@ -16,10 +26,13 @@ export default {
             type: Boolean,
             default: false,
         },
+        route: {
+            type: String,
+            default: "",
+        }
     }
 }
 </script>
-
 
 <template>
     <section class="recent-projects">
@@ -27,34 +40,40 @@ export default {
         <p v-if="homePage">Some recent projects worked on by <span id="name">PSC Surveying Ltd.</span></p>
         <div class = "projects-wrapper">
           <RecentProject
-            :image="OfferingImage1"
+            :image="img1"
             projectName="Project 1"
             :isLong="true"
+            :extraRoute="route"
           />
           <RecentProject
-            :image="OfferingImage1"
+            :image="img2"
             projectName="Project 2"
             :isLong="false"
+            :extraRoute="route"
           />
           <RecentProject
-            :image="OfferingImage1"
+            :image="img3"
             projectName="Project 3"
             :isLong="false"
+            :extraRoute="route"
           />
           <RecentProject
-            :image="OfferingImage1"
+            :image="img4"
             projectName="Project 4"
             :isLong="false"
+            :extraRoute="route"
           />
           <RecentProject
-            :image="OfferingImage1"
+            :image="img5"
             projectName="Project 5"
             :isLong="false"
+            :extraRoute="route"
           />
           <RecentProject
-            :image="OfferingImage1"
+            :image="img6"
             projectName="Project 6"
             :isLong="true"
+            :extraRoute="route"
           />
         </div>  
     </section>

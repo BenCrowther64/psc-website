@@ -1,11 +1,13 @@
 <script>
 import Footer from '../../../components/Footer.vue';
 import TopBannerImage from '../../../components/TopBannerImage.vue';
+import RecentProjectContainer from '../../../components/Home/RecentProjectContainer.vue';
 
 export default {
   components: {
     Footer,
     TopBannerImage,
+    RecentProjectContainer
   },
 }
 </script>
@@ -61,6 +63,10 @@ export default {
         of a ‘Project Timeline’ and ‘Site Surveys and Investigation Tracker’ for more complex projects.
       </p>
     </div>
+
+    <hr class="solid">
+
+    <RecentProjectContainer :homePage="false" route="Principal-Designer/"/>
 
     <Footer></Footer>
 </template>
