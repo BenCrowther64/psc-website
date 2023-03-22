@@ -97,31 +97,31 @@ const routes = [
   },
 
   {
-    path: '/Project-:id/',
+    path: '/:name/',
     component: FullPageProject,
     meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Building-Surveying/Project-:id/',
+    path: '/Building-Surveying/:name/',
     component: FullPageProject,
     meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Project-Management/Project-:id/',
+    path: '/Project-Management/:name/',
     component: FullPageProject,
     meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Quantity-Surveying/Project-:id/',
+    path: '/Quantity-Surveying/:name/',
     component: FullPageProject,
     meta: { title: 'PSC Surveying Ltd.' },
   },
 
   {
-    path: '/Principal-Designer/Project-:id/',
+    path: '/Principal-Designer/:name/',
     component: FullPageProject,
     meta: { title: 'PSC Surveying Ltd.' },
   },

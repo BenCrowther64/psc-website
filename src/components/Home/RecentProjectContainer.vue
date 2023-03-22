@@ -41,37 +41,37 @@ export default {
         <div class = "projects-wrapper">
           <RecentProject
             :image="img1"
-            projectName="Project 1"
+            projectName="Woolston Manor"
             :isLong="true"
             :extraRoute="route"
           />
           <RecentProject
             :image="img2"
-            projectName="Project 2"
+            projectName="Aldershot Garrison"
             :isLong="false"
             :extraRoute="route"
           />
           <RecentProject
             :image="img3"
-            projectName="Project 3"
+            projectName="Basingstoke Hospital"
             :isLong="false"
             :extraRoute="route"
           />
           <RecentProject
             :image="img4"
-            projectName="Project 4"
+            projectName="Riverside House"
             :isLong="false"
             :extraRoute="route"
           />
           <RecentProject
             :image="img5"
-            projectName="Project 5"
+            projectName="St. Marys Church"
             :isLong="false"
             :extraRoute="route"
           />
           <RecentProject
             :image="img6"
-            projectName="Project 6"
+            projectName="Village Hall"
             :isLong="true"
             :extraRoute="route"
           />
@@ -113,6 +113,10 @@ export default {
   }
 
   @media (max-width: 768px) {
-    
+    .projects-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1%;
+    }
   }
 </style>
