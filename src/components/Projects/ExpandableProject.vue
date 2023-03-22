@@ -92,7 +92,7 @@
 .text-container h1{
     color: var(--psc-white);
     margin: 0;
-    font-size: 30px;
+    font-size: 1.8vmax;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,7 +111,7 @@
 }
 
 .content-wrapper {
-    border: solid 8px var(--psc-dark-blue);
+    border: solid 5px var(--psc-dark-blue);
     display: flex;
     position: relative;
     top: 50%;
@@ -120,7 +120,7 @@
     width: 70vw;
     height: 70vh;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .content-wrapper img{
@@ -258,11 +258,9 @@
     }
 
     .full-text-container h1 {
-        margin: 0;
         font-size: 2.2vmax;
     }
     .full-text-container p {
-        margin: 0;
         font-size: 1.7vmax;
     }
 
@@ -278,16 +276,14 @@
 @media (min-width: 1024px)
 {
     .full-text-container p {
-        margin: 0;
         font-size: 1.2vmax;
     }
 }
 
-@media (min-width: 1280px)
+@media (min-width: 1440px)
 {
     .full-text-container p {
-        margin: 0;
-        font-size: 1.2vmax;
+        font-size: 1vmax;
     }
 }
 </style>
