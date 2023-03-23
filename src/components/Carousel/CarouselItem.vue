@@ -38,7 +38,7 @@
     .slide-in-leave-active,
     .slide-out-enter-active,
     .slide-out-leave-active {
-    transition: all 1s ease-in-out;
+    transition: all 1s ease;
     }
     .slide-in-enter-from {
     transform: translateX(-100%);
