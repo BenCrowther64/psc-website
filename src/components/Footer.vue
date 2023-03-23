@@ -18,8 +18,8 @@
         </b>
         <div class = "touch">
           <p style="margin: 0%;">PSC Surveying Ltd. <br> Thornborough Hall <br> Leyburn <br> North Yorkshire <br> DL8 5AB</p>
-          <a id="link" href="mailto: pauls@psc-surveying-ltd.com">Paul Smith - 07713 167555</a>
-          <a id="link" href="mailto: stephenc@psc-surveying-ltd.com">Stephen Crowther - 07912 392045 </a>
+          <a id="link" href="mailto: pauls@psc-surveying-ltd.com">Paul Smith</a>
+          <a id="link" href="mailto: stephenc@psc-surveying-ltd.com">Stephen Crowther</a>
         </div>
     </div>  
     <div class="link-section wrapper text">
@@ -126,12 +126,18 @@
     .wrapper{
       width: 90%;
       margin: 10px 20px;
+      font-size: 1.7vmax;
     }
 
     .footer-wrapper {
       flex-direction: column;
       align-items: center;
       max-width: 100%;
+    }
+
+    
+    .link-section {
+      margin-top: 8vmax;
     }
   }
 
@@ -139,12 +145,17 @@
     .wrapper{
       width: 90%;
       margin: 10px 20px;
+      font-size: 1.7vmax;
     }
 
     .footer-wrapper {
       flex-direction: column;
       align-items: center;
       max-width: 100%;
+    }
+
+    .link-section {
+      margin-top: 8vmax;
     }
 }
 

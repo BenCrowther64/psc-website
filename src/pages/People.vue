@@ -164,6 +164,7 @@ export default {
 }
 
 #explanation {
+  font-size:  2.5vmin;
   font-weight: 400;
   margin-top: 0;
 }
@@ -199,7 +200,7 @@ export default {
   }
 
   .top-banner h1 {
-    font-size: 1.5em;
+    font-size: 5vmin;
   }
 
   #name {
@@ -209,48 +210,53 @@ export default {
   #description{
     max-width: 80vw;
   }
+  
+  #explanation {
+    font-size:  4vmin;
+  }
+
   }
 
   @media (max-width: 768px) {
-  .directors-wrapper {
-    text-align: center;
-  }
-  .directors-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .directors-container img {
-    width: 80vw;
-    height: 50vh;
-    object-fit: cover;
-  }
-  .director {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-  }
-  .text-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    max-width: 80vw;
-  }
-  .text-wrapper p {
-    font-size: 15px;
-  }
-
-  .top-banner h1 {
-    font-size: 1.5em;
-  }
-
-  #name {
-    margin-top: 2vh;
+    .directors-wrapper {
+      text-align: center;
     }
-  }
+    .directors-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .directors-container img {
+      width: 80vw;
+      height: 50vh;
+      object-fit: cover;
+    }
+    .director {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    .text-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0%;
+      max-width: 80vw;
+    }
+    .text-wrapper p {
+      font-size: 15px;
+    }
 
-  #description{
-    max-width: 80vw;
+    .top-banner h1 {
+      font-size: 5vmin;
+    }
+
+    #name {
+      margin-top: 2vh;
+    }
+
+      #explanation {
+      font-size:  4vmin;
+    }
   }
 </style>

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <NavScreen darkMode="true"/>
+    <NavScreen :darkMode="true" />
     <HomeImageLink></HomeImageLink>
 
     <div class = "contact-container">
@@ -92,7 +92,7 @@ export default {
 
   .contact-container p {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 5vmin;
     font-weight: 300;
     color: var(--psc-dark-blue);
     margin: 1%;

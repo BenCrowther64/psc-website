@@ -32,11 +32,15 @@
 }
 
 .contact-text h1{
-  font-size: 30px;
+  font-size: 2vmax;
   margin: 0;
   color: var(--psc-dark-blue);
 }
 
+
+.contact-text p{
+  font-size: 1vmax;
+}
 .contact-text a{
   font-weight: bolder;
   color: var(--psc-dark-blue);
@@ -45,6 +49,35 @@
 
 .contact-text a:hover{
   text-decoration: underline;
+}
+
+@media (pointer:none), (pointer:coarse){
+
+  .contact-text h1{
+    font-size: 2vmax;
+  }
+
+  .contact-text p{
+    font-size: 2vmax;
+  }
+
+  .contact-text a{
+    font-size: 2vmax;
+  }
+}
+
+@media (max-width: 738px) {
+  .contact-text h1{
+    font-size: 4vmax;
+  }
+
+  .contact-text p{
+    font-size: 2vmax;
+  }
+
+  .contact-text a{
+    font-size: 2vmax;
+  }
 }
 
 </style>
