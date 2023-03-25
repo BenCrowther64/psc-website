@@ -4,7 +4,8 @@
   export default {
     data() {
       return {
-        loading: false,
+        loading: true,
+        newLoad: true,
       }
     },
     components: {
@@ -12,8 +13,8 @@
     },
     watch: {
       '$route': function(to, from) {
-        if (to.fullPath === "/") {
-          this.loading = true
+        if (this.$route.fullPath === "/" && this.newLoad) {
+          this.newLoad = false
           setTimeout(() => {this.loading = false }, 1500)
         } else {
           this.loading = false
@@ -26,8 +27,22 @@
 
 
 <template>
-  <Loading :isLoading="loading"/>
+  <Transition>
+    <Loading v-show="loading"/>
+  </Transition>
 
   <router-view></router-view>
 </template>
+
+<style>
+
+.v-enter-active, .v-leave-active {
+  transition: opacity 1s;
+}
+
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+
+</style>
 

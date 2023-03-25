@@ -1,14 +1,8 @@
 <template>
-    <div :class="{ loading: true, fadeout: !isLoading}">
+    <div class="loading">
         <img src="../../assets/images/home/loading-state.gif">
     </div>  
 </template>
-
-<script>
-    export default {
-    props: ["isLoading"]
-    };
-</script>
 
 <style scoped>
     .loading{
@@ -28,16 +22,5 @@
         transform: translate(-50%, -50%);
         width: 80px;
         height: 80px;
-    }
-
-    .fadeout {
-        animation: fadeout 1.2s forwards;
-    }
-
-    @keyframes fadeout {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
     }
 </style>
