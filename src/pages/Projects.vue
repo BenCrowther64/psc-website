@@ -4,6 +4,7 @@ import LogoNavBar from '../components/LogoNavBar.vue';
 import ProjectType from '../components/Projects/ProjectType.vue';
 
 import PartyWallImage from '../assets/images/services/building-surveying/party-wall/banner.jpg';
+import DilapidationsImage from '../assets/images/projects/dilapidations/image2.jpg';
 
 export default {
   components: {
@@ -15,6 +16,7 @@ export default {
   data() {
     return {
       PartyWallImage,
+      DilapidationsImage,
     }
   },
 }
@@ -28,7 +30,7 @@ export default {
 
     <div class="project-type-container">
       <ProjectType projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType projectType="DILAPIDATIONS" :image="PartyWallImage" projectUrl = "Dilapidations"/>
+      <ProjectType projectType="DILAPIDATIONS" :image="DilapidationsImage" projectUrl = "Dilapidations"/>
       <ProjectType projectType="BUILDING SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>

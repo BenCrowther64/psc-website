@@ -30,6 +30,14 @@ export default {
       </h1>
     </div>
 
+    <div class = bs-click-heading>
+      <h1>
+        CLICK BELOW TO SEE DETAILED DESCRIPTIONS OF OUR BUILDING SURVEYING SERVICES
+      </h1>
+    </div>
+
+    <hr class="solid">
+
     <div class = "bs-offerings-wrapper">
       <div class = bs-wrapper>
         <router-link to='/Building-Surveying/Dilapidations/'>
@@ -68,7 +76,7 @@ export default {
     display: flex;
     flex-direction: row;
     max-width: 100%;
-    margin: 0 1% 2% 1%;
+    margin: 2% 1% 2% 1%;
     gap: 1%;
   }
 
@@ -102,6 +110,17 @@ export default {
     color: var(--psc-dark-blue);
     font-size:  1em;
     font-weight: 500;
+}
+
+.bs-click-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1%;
+    color: var(--psc-dark-blue);
+    font-size:  .5em;
+    font-weight: 300;
 }
 
 
