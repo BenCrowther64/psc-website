@@ -11,53 +11,59 @@ export default {
 </script>
 
 <template>
-    <TopBannerImage text="SURVEYING"></TopBannerImage>
+    <TopBannerImage text="BUILDING SURVEYING"></TopBannerImage>
 
     <div class = text-wrapper>
       <h1>BUILDING SURVEYING SERVICES</h1>
       <p>
-        Our party wall services are delivered by Stephen Crowther MRICS, CMaPS, Tech IOSH, who is a Director of PSC Surveying Ltd, a Chartered Building Surveyor and a member of The Pyramus & Thisbe Society. 
+        Our Building Surveying activities are led by Stephen Crowther MRICS, CMaPS, Tech IOSH, who is a Director of PSC Surveying Ltd and a Chartered Building Surveyor with over 30 years of experience in surveying commercial, industrial and residential property for a range of purposes.
       </p>
       <p>
-        The Pyramus & Thisbe Society is a learned society for professionals with a particular interest in matters relating to The Party Wall etc. Act 1996 and in the solving of all other similar neighbour issues. 
-        The Society seeks to advance knowledge of party wall legislation and procedure and to promote best professional practice in its application. All members are bound to conform the Societies Protocols.
-      </p>
-      <p>
-        We aim to give some simple guidance as what action a Building Owner planning to undertake work on their residential or commercial property, which falls under the jurisdiction of The Party Wall etc. Act 1996 
-        (the ‘Act’) might want to take. Also, we can advise Adjoining Owners who might have been served with a Notice(s) by a Building Owner or their Surveyor.
-      </p>
-      <p>
-        The ‘Act’ grants rights to Building Owners to carry out specific building work. At the same time the ‘Act’ protects the rights of Adjoining Owners, or neighbours, from being ‘unreasonably, inconvenienced as a 
-        result of the right to carry out this specific building work. 
-      </p>
-      <p>
-        The specific building work includes:
+        Our Building Surveying Services include:
       </p>
       <ul>
         <li>
-            New building on or adjacent to the boundary line.
+          Identification of <strong>Building Defects & Contract Administration</strong> of building repairs
         </li>
         <li>
-            Digging within 3.0 m or 6.0 m of an Adjoining Owners building or structure to a level lower than the bottom of the Adjoining Owners foundations.
+          <strong>Building & Condition Surveys</strong> of Commercial, Industrial and Residential property
         </li>
         <li>
-            Carrying out specific work to a shared structure on the boundary line which could include a wall between two different owners or the floor/ceiling between flats.
+          <strong>Quality Monitoring</strong> of new build or refurbishment construction projects
+        </li>
+        <li>
+          <strong>Party Wall Surveying & Dilapidations</strong>
         </li>
       </ul>
       <p>
-        By following the procedural requirements of the ‘Act’ Building Owners protect themselves from any delays to a project once work starts on site which might arise as a result of not properly notifying their 
-        neighbour. 
+        <strong>Identification of new build or refurbishment construction projects</strong>
       </p>
       <p>
-        A photographic and written schedule of condition, undertaken on the Adjoining Owners property before the commencement of any works forms an important part of the process. The schedule of condition protects the 
-        Building Owner from being liable for any pre-existing damage. Also, it protects the Adjoining Owner by proving any damage, in the unlikely event this occurs, was not pre-existing.
+        Building Surveyors specialise in the identification and rectification of building defects. Building defects could range from leaking roofs to structural movement and everything in between. We undertake detailed inspections on commercial, industrial and residential property to identify the root causes of any problems preparing specifications as to how these can be put right. Our role can extend to obtaining competitive quotations from building contractors and overseeing the work on site as a contract administrator.
       </p>
       <p>
-        PSC Surveying Ltd are able to assist Building Owners and Adjoining Owners in ensuring the procedural requirements of the ‘Act’ are followed and have been carrying out this role throughout England and Wales for many years. 
+        <strong>Commercial, Industrial and Residential Surveys</strong>
       </p>
       <p>
-        We do this by undertaking title deed searches on adjoining properties, serving letters/ notices, undertaking photographic and written schedules of condition and agreeing ‘Party Wall Awards’ before the commencement of any 
-        building works which fall under the jurisdiction of the Party Wall etc Act 1996.
+        Our range of surveys are tailored to your specific needs. This would be dependant on whether the survey is needed prior to an acquisition (pre-purchase, building survey or schedule of condition) during occupation as a building owner or tenant (stock condition, planned maintenance, schedule of condition to restrict repairing obligations under a lease or insurance related), if the property is being disposed of (vendor survey or terminal schedule of dilapidations) or if the building is being considered for re-development.
+      </p>
+      <p>
+        <strong>Quality Monitoring</strong>
+      </p>
+      <p>
+        This service involves undertaking site visits to new build or refurbishment construction projects and reviewing the quality of construction and compliance with the project specification. We would normally provide a report following each site visit identifying any issues which require the contractor’s attention. On completion of the project, we would normally snag out the works and issue a list to the Contractor. We would then liaise with the Contractor on the timescales for remedial works and re-inspect the works in preparation for practical completion.
+      </p>
+      <p>
+        <strong>Party Wall Surveying</strong>
+      </p>
+      <p>
+        We carry out the role of party wall surveyor for Building Owners and Adjoining Owners throughout England and Wales.
+      </p>
+      <p>
+        <strong>Dilapidations</strong>
+      </p>
+      <p>
+        We act for Landlords and Tenants at the start, during and at the end of commercial leases. We also act for Landlords on liaising with Tenants in connection with a licence for alterations.
       </p>
     </div>
 

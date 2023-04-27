@@ -19,6 +19,7 @@ import Surveying from './Services/BuildingSurveying/Surveying.vue'
 
 //Building Surveying Projects
 import PartyWallProjects from './Projects/PartyWall.vue';
+import DilapidationProjects from './Projects/Dilapidations.vue'
 
 //Front Page Full Page Project
 import FullPageProject from './Projects/FullPageProject.vue';
@@ -94,6 +95,12 @@ const routes = [
     path: '/Projects/Party-Wall/',
     component: PartyWallProjects,
     meta: { title: 'Party Wall Projects - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Projects/Dilapidations/',
+    component: DilapidationProjects,
+    meta: { title: 'Dilapidation Projects - PSC Surveying Ltd.' },
   },
 
   {

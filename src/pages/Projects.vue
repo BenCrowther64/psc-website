@@ -28,7 +28,7 @@ export default {
 
     <div class="project-type-container">
       <ProjectType projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType projectType="DILAPIDATIONS" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="DILAPIDATIONS" :image="PartyWallImage" projectUrl = "Dilapidations"/>
       <ProjectType projectType="BUILDING SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>

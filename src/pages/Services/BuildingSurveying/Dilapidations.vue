@@ -2,25 +2,34 @@
 import Footer from '../../../components/Footer.vue';
 import TopBannerImage from '../../../components/TopBannerImage.vue';
 
+import Banner from '../../../assets/images/services/building-surveying/dilapidations/banner.jpg'
+
 export default {
   components: {
     Footer,
     TopBannerImage,
   },
+  data() {
+    return {
+      Banner,
+    }
+  }
 }
 </script>
 
 <template>
-    <TopBannerImage text="DILAPIDATIONS"></TopBannerImage>
+    <TopBannerImage text="DILAPIDATIONS" :image="Banner"></TopBannerImage>
 
     <div class = text-wrapper>
       <h1>OUR DILAPIDATION ACTIVITIES ARE AIMED AT PROVIDING ADVICE TO LANDLORDS AND TENANTS OF COMMERCIAL AND INDUSTRIAL PROPERTY AT THE START, DURING OR AT THE END OF A LEASE.</h1>
       <p>
         Our Dilapidation services are delivered by Stephen Crowther MRICS, CMaPS, Tech IOSH, who is a Director of PSC Surveying Ltd, a Chartered Building Surveyor.
       </p>
-      <b>
-        Acting for a Landlord 
-      </b>
+      <p>
+        <strong>
+          Acting for a Landlord 
+        </strong>
+      </p>
       <p>
         When Acting for Landlord we would review the provisions of the relevant Lease and any Licence documentation obtaining clarification where necessary from the Landlord or their solicitor
          as to specific provisions including their intentions for the property. One of our Chartered Surveyors would carry out an inspection of the Property in order to prepare a Schedule of Dilapidations 
@@ -36,9 +45,11 @@ export default {
       <p>
         Throughout this process we would continue to advise the Landlord generally as to the progress of the dilapidation claim and any settlement proposals. 
       </p>
-      <b>
-        Acting for a Tenant
-      </b>
+      <p>
+        <strong>
+          Acting for a Tenant
+        </strong>
+      </p>
       <p>
         When acting for a Tenant we would review the provisions of the relevant Lease and any Licence documentation obtaining clarification where necessary from the Tenant or the Tenant’s solicitor as to any specific 
         provisions. This would include trying to establish the Landlord’s intentions for the property.  One of our Chartered Building Surveyors would carry out an inspection of the property and review/comment on the 
