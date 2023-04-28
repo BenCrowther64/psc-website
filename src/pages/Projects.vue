@@ -5,6 +5,7 @@ import ProjectType from '../components/Projects/ProjectType.vue';
 
 import PartyWallImage from '../assets/images/services/building-surveying/party-wall/banner.jpg';
 import DilapidationsImage from '../assets/images/projects/dilapidations/image2.jpg';
+import BuildingSurveyingImage from '../assets/images/projects/building-surveying/image1.jpg'
 
 export default {
   components: {
@@ -17,6 +18,7 @@ export default {
     return {
       PartyWallImage,
       DilapidationsImage,
+      BuildingSurveyingImage
     }
   },
 }
@@ -31,7 +33,7 @@ export default {
     <div class="project-type-container">
       <ProjectType projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="DILAPIDATIONS" :image="DilapidationsImage" projectUrl = "Dilapidations"/>
-      <ProjectType projectType="BUILDING SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="BUILDING SURVEYING" :image="BuildingSurveyingImage" projectUrl = "Building-Surveying"/>
       <ProjectType projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="QUANTITY SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
