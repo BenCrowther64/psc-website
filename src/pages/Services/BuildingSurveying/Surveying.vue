@@ -2,16 +2,24 @@
 import Footer from '../../../components/Footer.vue';
 import TopBannerImage from '../../../components/TopBannerImage.vue';
 
+import Banner from '../../../assets/images/services/building-surveying/building-surveying/banner.jpeg';
+
 export default {
   components: {
     Footer,
     TopBannerImage,
   },
+
+  data() {
+    return {
+      Banner,
+    }
+  }
 }
 </script>
 
 <template>
-    <TopBannerImage text="BUILDING SURVEYING"></TopBannerImage>
+    <TopBannerImage text="BUILDING SURVEYING" :image="Banner"></TopBannerImage>
 
     <div class = text-wrapper>
       <h1>BUILDING SURVEYING SERVICES</h1>
