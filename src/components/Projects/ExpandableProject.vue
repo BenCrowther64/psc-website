@@ -120,7 +120,7 @@
     width: 70vw;
     height: 70vh;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .content-wrapper img{
