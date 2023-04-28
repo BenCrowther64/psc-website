@@ -92,7 +92,7 @@
 .text-container h1{
     color: var(--psc-white);
     margin: 0;
-    font-size: 1.8vmax;
+    font-size: 1.5vw;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -5,7 +5,7 @@ import ProjectType from '../components/Projects/ProjectType.vue';
 
 import PartyWallImage from '../assets/images/services/building-surveying/party-wall/banner.jpg';
 import DilapidationsImage from '../assets/images/projects/dilapidations/image2.jpg';
-import BuildingSurveyingImage from '../assets/images/projects/building-surveying/image1.jpg'
+import BuildingSurveyingImage from '../assets/images/projects/building-surveying/image4.jpg'
 
 export default {
   components: {
