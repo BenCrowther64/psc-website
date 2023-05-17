@@ -3,7 +3,7 @@
         <router-link :to="'/' + extraRoute + name">
             <img :src="image">
             <Transition>
-                <div v-if="hover" class="text-container">
+                <div v-if="hover || isMobile" class="text-container">
                     <h1>{{ projectName }}</h1>
                 </div>
             </Transition>
@@ -144,6 +144,10 @@
     .project-container{
         width: 49%;
         height: 20vh;
+    }
+
+    .text-container {
+        background-color: rgba(0, 0, 0, 0);
     }
 
     .long-project-container{
