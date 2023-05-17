@@ -25,9 +25,6 @@
                 name: this.join(this.projectName)
             }
         },
-        mounted() {
-            console.log(this.isMobile())
-        },
         methods: {
             join(str) {
                 str = str.replace(/\s/g, '-')
