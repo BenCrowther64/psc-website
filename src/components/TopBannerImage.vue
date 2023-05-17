@@ -63,7 +63,7 @@ export default {
 <style scoped>
   .top-banner-wrapper {
     width: 100%;
-    height: 50dvh;
+    height: 50svh;
   }
 
   .top-banner-wrapper img {
