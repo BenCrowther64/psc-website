@@ -2,7 +2,7 @@
 import Footer from '../../../components/Footer.vue';
 import TopBannerImage from '../../../components/TopBannerImage.vue';
 
-import Banner from '../../../assets/images/services/building-surveying/building-surveying/banner.jpeg';
+import Banner from '../../../assets/images/services/building-surveying/building-surveying/banner.jpg';
 
 export default {
   components: {
