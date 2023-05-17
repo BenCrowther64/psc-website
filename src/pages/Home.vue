@@ -8,7 +8,7 @@ import RecentProjectContainer from '../components/Home/RecentProjectContainer.vu
 
 import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
-import SlideShow3 from '../assets/images/home/img3.png';
+import SlideShow3 from '../assets/images/home/img3.jpg';
 
 import OfferingImage1 from '../assets/images/home/offering1.jpg';
 import QuantitySurveyImage from '../assets/images/home/offering1.jpg';
@@ -45,10 +45,15 @@ export default {
     ContactDiv,
     RecentProjectContainer,
   },
-
   created () {
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('touchmove', this.onScroll);
+    if (this.isMobile()) {
+      this.inView = true;
+      for (let i = 0; i < 4; i++) {
+        this.offeringShow[i] = true;
+      }
+    }
   },
   destroyed () {
     window.removeEventListener('scroll', this.onScroll);
@@ -60,6 +65,13 @@ export default {
     },
   },
   methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    },
     onScroll (e) {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
     },
@@ -156,7 +168,8 @@ export default {
     display: flex;
     width: 100%;
     color: #f3f3f3;
-}
+    font-size: 0.7em;
+  }
 
 .text-wrapper {
     font-size: large;
@@ -211,11 +224,11 @@ export default {
 
 @media (pointer:none), (pointer:coarse){
   #main-branding{
-    width: 25vh;
+    width: 30vh;
   }
   .offerings-wrapper{
     flex-direction: column;
-    gap: 2vh;
+    gap: 3vh;
     margin: 1%;
   } 
 
@@ -226,12 +239,12 @@ export default {
 
 @media (max-width: 738px) {
   #main-branding{
-    width: 25vh;
+    width: 30vh;
   }
 
   .offerings-wrapper{
     flex-direction: column;
-    gap: 2vh;
+    gap: 3vh;
     margin: 1%;
   }
 

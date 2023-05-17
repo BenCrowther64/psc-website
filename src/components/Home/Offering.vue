@@ -29,7 +29,7 @@ export default {
     justify-content: top;
     align-items: left;
     text-align: left;
-    transition: all .3s ease;
+    transition: all .2s ease;
     flex: 0 0 23vw;
 }
 
@@ -61,12 +61,12 @@ export default {
     width: 23.6vw;
     height: 23.6vw;
     object-fit: cover;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: all .5s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .slide-enter-from,

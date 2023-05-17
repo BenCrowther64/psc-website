@@ -192,6 +192,8 @@
 
     .content-wrapper{
         flex-direction: column;
+        width: 90%;
+        height: 90%;
     }
 
     .close{
@@ -211,11 +213,9 @@
 
     .full-text-container h1 {
         margin: 0;
-        font-size: 2.2vmax;
     }
     .full-text-container p {
         margin: 0;
-        font-size: 1.7vmax;
     }
 
     .black {
@@ -240,15 +240,17 @@
 
     .content-wrapper{
         flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+
+    .close{
+        margin: 1.2vw
     }
 
     .content-wrapper img{
         width: 100%;
         height: 30vh;
-    }
-
-    .close{
-        margin: 1.2vw
     }
 
     .full-text-container {
@@ -258,14 +260,16 @@
     }
 
     .full-text-container h1 {
-        font-size: 2.2vmax;
+        margin: 0;
+        font-size: 2.4vmax;
     }
     .full-text-container p {
-        font-size: 1.7vmax;
+        margin: 0;
+        font-size: 2vmax;
     }
 
     .black {
-    background-image: url("../../assets/images/home/close.png")
+        background-image: url("../../assets/images/home/close.png")
     }
 
     .white {
@@ -276,14 +280,14 @@
 @media (min-width: 1024px)
 {
     .full-text-container p {
-        font-size: 1.2vmax;
+        font-size: 1.5vmax;
     }
 }
 
 @media (min-width: 1440px)
 {
     .full-text-container p {
-        font-size: 1vmax;
+        font-size: 1.2vmax;
     }
 }
 </style>

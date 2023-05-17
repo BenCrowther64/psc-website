@@ -3,7 +3,7 @@
         <router-link :to="'/' + extraRoute + name">
             <img :src="image">
             <Transition>
-                <div v-if="hover" class="text-container">
+                <div v-if="hover || isMobile" class="text-container">
                     <h1>{{ projectName }}</h1>
                 </div>
             </Transition>
@@ -29,7 +29,14 @@
             join(str) {
                 str = str.replace(/\s/g, '-')
                 return str
-            }
+            },
+            isMobile() {
+                if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    return true
+                } else {
+                    return false
+                }
+            },
         },
     }
 </script>
@@ -98,11 +105,11 @@
 
 @media (pointer:none), (pointer:coarse) {
     .project-container:hover{
-        transform: translate(0, -2px);
+        transform: translate(0, 0);
     }
 
     .long-project-container:hover{
-        transform: translate(0, -2px);
+        transform: translate(0, 0);
     }
 
     .project-container{
@@ -113,17 +120,25 @@
     .long-project-container{
         width: 49%;
         height: 20vh;
+    }
+
+    .text-container {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .text-container h1{
+        font-size: 1em;
     }
 }
 
 @media (max-width: 738px)
 {
     .project-container:hover{
-        transform: translate(0, -2px);
+        transform: translate(0, 0);
     }
 
     .long-project-container:hover{
-        transform: translate(0, -2px);
+        transform: translate(0, 0);
     }
 
     .project-container{
@@ -135,5 +150,6 @@
         width: 49%;
         height: 20vh;
     }
+    
 }
 </style>

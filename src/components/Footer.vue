@@ -55,10 +55,9 @@
     display: flex;
     justify-content: space-around;
     align-items: top;
-    padding-top: 20px;
     background-color: #f5f5f5;
     width: 100%;
-    padding: 50px 0px;
+    padding: 40px 0px;
   }
 
   .text {
@@ -124,8 +123,8 @@
 
   @media (pointer:none), (pointer:coarse){
     .wrapper{
-      width: 90%;
-      margin: 10px 20px;
+      width: 95%;
+      margin: 10px 0px;
       font-size: 1.7vmax;
     }
 
@@ -133,6 +132,7 @@
       flex-direction: column;
       align-items: center;
       max-width: 100%;
+      padding: 4% 0;
     }
 
     
@@ -143,8 +143,8 @@
 
   @media (max-width: 1200px) {
     .wrapper{
-      width: 90%;
-      margin: 10px 20px;
+      width: 95%;
+      margin: 10px 0px;
       font-size: 1.7vmax;
     }
 

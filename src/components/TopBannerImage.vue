@@ -35,7 +35,7 @@ export default {
   methods: {
     scrollDown() {
       window.scrollTo({
-        top: 50 * window.innerHeight/100,
+        top: 50 * window.innerHeight / 100,
         behavior: 'smooth'
       });
     }
@@ -63,7 +63,7 @@ export default {
 <style scoped>
   .top-banner-wrapper {
     width: 100%;
-    height: 50vh;
+    height: 50dvh;
   }
 
   .top-banner-wrapper img {

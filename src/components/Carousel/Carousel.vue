@@ -147,5 +147,12 @@ watch:{
     max-width: 100%;
     overflow: hidden;
 }
+
+
+@media (pointer:none), (pointer:coarse){
+    .carousel-inner {
+        height: 50vh;
+    }
+}
 </style>
   

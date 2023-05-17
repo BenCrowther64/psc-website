@@ -61,7 +61,7 @@
    .carousel-control {
        height: 50px;
        width: 30px;
-       top: calc(46%);
+       top: calc(44%);
     }
 }
 
@@ -69,7 +69,7 @@
     .carousel-control {
        height: 50px;
        width: 30px;
-       top: calc(46%);
+       top: calc(44%);
     }
 }
 </style>

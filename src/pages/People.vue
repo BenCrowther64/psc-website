@@ -152,7 +152,6 @@ export default {
 }
 
 .top-banner {
-  font-size: 0.8em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,6 +160,12 @@ export default {
   background-color: var(--psc-light-gray);
   padding: 2%;
   margin: 0 1%;
+}
+
+.top-banner h1{
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 10px 0px;
 }
 
 #explanation {
@@ -178,7 +183,7 @@ export default {
     align-items: center;
   }
   .directors-container img {
-    width: 80vw;
+    width: 98vw;
     height: 50vh;
     object-fit: cover;
   }
@@ -193,14 +198,10 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: 0%;
-    max-width: 80vw;
+    max-width: 98vw;
   }
   .text-wrapper p {
     font-size: 15px;
-  }
-
-  .top-banner h1 {
-    font-size: 5vmin;
   }
 
   #name {
@@ -208,7 +209,7 @@ export default {
     }
 
   #description{
-    max-width: 80vw;
+    max-width: 98vw;
   }
   
   #explanation {
@@ -226,7 +227,7 @@ export default {
       align-items: center;
     }
     .directors-container img {
-      width: 80vw;
+      width: 98vw;
       height: 50vh;
       object-fit: cover;
     }
@@ -241,21 +242,21 @@ export default {
       display: flex;
       flex-direction: column;
       margin-left: 0%;
-      max-width: 80vw;
+      max-width: 98vw;
     }
     .text-wrapper p {
       font-size: 15px;
     }
 
-    .top-banner h1 {
-      font-size: 5vmin;
+    #description{
+      max-width: 98vw;
     }
 
     #name {
       margin-top: 2vh;
     }
 
-      #explanation {
+    #explanation {
       font-size:  4vmin;
     }
   }

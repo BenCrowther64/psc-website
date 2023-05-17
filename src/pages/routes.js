@@ -1,29 +1,29 @@
 import {createRouter} from 'vue-router'
 
 //Main Pages
-import Homepage from './Home.vue';
-import Projects from './Projects.vue';
-import Contact from './Contact.vue';
-import People from './People.vue';
+const Homepage = () => import('./Home.vue');
+const Projects = () => import('./Projects.vue');
+const Contact = () => import('./Contact.vue');
+const People = () => import('./People.vue');
 
 //Services
-import BuildingSurveying from './Services/BuildingSurveying/BuildingSurveying.vue';
-import PrincipalDesigner from './Services/PrincipalDesigner/PrincipalDesigner.vue';
-import ProjectManagement from './Services/ProjectManagement/ProjectManagement.vue';
-import QuantitySurveying from './Services/QuantitySurveying/QuantitySurveying.vue';
+const BuildingSurveying = () => import('./Services/BuildingSurveying/BuildingSurveying.vue');
+const PrincipalDesigner = () => import('./Services/PrincipalDesigner/PrincipalDesigner.vue');
+const ProjectManagement = () => import('./Services/ProjectManagement/ProjectManagement.vue');
+const QuantitySurveying = () => import('./Services/QuantitySurveying/QuantitySurveying.vue');
 
 //Building Surveying
-import Dilapidations from './Services/BuildingSurveying/Dilapidations.vue';
-import PartyWall from './Services/BuildingSurveying/PartyWallService.vue';
-import Surveying from './Services/BuildingSurveying/Surveying.vue'
+const Dilapidations = () => import('./Services/BuildingSurveying/Dilapidations.vue');
+const PartyWall = () => import('./Services/BuildingSurveying/PartyWallService.vue');
+const Surveying = () => import('./Services/BuildingSurveying/Surveying.vue');
 
 //Building Surveying Projects
-import PartyWallProjects from './Projects/PartyWall.vue';
-import DilapidationProjects from './Projects/Dilapidations.vue'
-import BuildingSurveyingProjects from './Projects/BuildingSurveying.vue'
+const PartyWallProjects = () => import('./Projects/PartyWall.vue');
+const DilapidationProjects = () => import('./Projects/Dilapidations.vue')
+const BuildingSurveyingProjects = () => import('./Projects/BuildingSurveying.vue')
 
 //Front Page Full Page Project
-import FullPageProject from './Projects/FullPageProject.vue';
+const FullPageProject = () => import('./Projects/FullPageProject.vue');
 
 const routes = [
   {
@@ -146,12 +146,18 @@ export default function (history) {
     history,
     routes,
     scrollBehavior (to, from, savedPosition) {
+      // checks if the user is on the homepage and if they are, it scrolls to the top of the page
+      if (to.path === "/") {
+        return
+      }
+      // checks if the user going to a previously navigated page and if they are, it scrolls to the position they were at
       if (savedPosition) {
         return savedPosition
       }
       if (to.hash) {
         return { el: to.hash }
       }
+      // if new page, scroll to top of page
       else {
         return { top: 0 }
       }
