@@ -3,7 +3,7 @@
         <router-link :to="'/' + extraRoute + name">
             <img :src="image">
             <Transition>
-                <div v-if="hover || isMobile" class="text-container">
+                <div v-if="hover || this.isMobile()" class="text-container">
                     <h1>{{ projectName }}</h1>
                 </div>
             </Transition>
