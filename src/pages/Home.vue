@@ -12,7 +12,7 @@ import SlideShow3 from '../assets/images/home/img3.jpg';
 
 import OfferingImage1 from '../assets/images/home/offering1.jpg';
 import QuantitySurveyImage from '../assets/images/home/offering1.jpg';
-import ProjectManagerImage from '../assets/images/home/offering2.jpeg';
+import ProjectManagerImage from '../assets/images/home/offering2.jpg';
 import BuildingSurveyingImage from '../assets/images/home/offering4.jpg';
 import PrincipalDesignerImage from '../assets/images/home/offering3.jpg';
 
