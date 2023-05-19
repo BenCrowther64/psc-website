@@ -112,7 +112,7 @@ export default {
         <div class="text-wrapper">
           <h1>
             AN EXPERIENCED PRACTICE OF CHARTERED SURVEYORS, QUANTITY SURVEYORS, PROJECT MANAGERS,
-            BUILDING SURVEYORS & PRINCIPLE DESIGNERS BASED IN LEEDS SINCE 2011.
+            BUILDING SURVEYORS & PRINCIPAL DESIGNERS BASED IN LEEDS SINCE 2011.
           </h1>
         </div>
       </section>
