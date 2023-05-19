@@ -150,7 +150,7 @@ watch:{
 
 @media (max-width: 738px) {
     .carousel-inner {
-        height: 50lvh;
+        height: 50svh;
     }
 }
 </style>

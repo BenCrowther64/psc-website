@@ -237,7 +237,7 @@ export default {
 
   .text-wrapper{
     font-size: 2vmax;
-    height: 50lvh;
+    height: 50svh;
   }
 
   .main-header{
@@ -258,7 +258,7 @@ export default {
 
   .text-wrapper{
     font-size: 2vmax;
-    height: 50lvh;
+    height: 50svh;
   }
 
   .main-header{
