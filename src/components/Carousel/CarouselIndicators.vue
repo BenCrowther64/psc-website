@@ -26,8 +26,8 @@ export default {
   z-index: 2;
 }
 .carousel-indicator-item {
-  width: 15px;
-  height: 15px;
+  height: 20px;
+  width: 20px;
   border: 2px solid #252E5F;
   background: #fff;
   opacity: 0.5;

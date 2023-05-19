@@ -148,10 +148,9 @@ watch:{
     overflow: hidden;
 }
 
-
-@media (pointer:none), (pointer:coarse){
+@media (max-width: 738px) {
     .carousel-inner {
-        height: 50vh;
+        height: 50lvh;
     }
 }
 </style>

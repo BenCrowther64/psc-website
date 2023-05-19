@@ -175,8 +175,11 @@ export default {
     font-size: large;
     padding: 0 8%;
     width: 100%;
+    display: flex;
     justify-content: center;
+    align-content: center;
     text-align: center;
+    flex-direction: column;
     color: var(--psc-dark-blue);
 }
 
@@ -233,7 +236,12 @@ export default {
   } 
 
   .text-wrapper{
-    font-size: 1.3em;
+    font-size: 2vmax;
+    height: 50lvh;
+  }
+
+  .main-header{
+    margin: 0;
   }
 }
 
@@ -249,8 +257,12 @@ export default {
   }
 
   .text-wrapper{
-    font-size: 1.3em;
+    font-size: 2vmax;
+    height: 50lvh;
   }
 
+  .main-header{
+    margin: 0;
+  }
 }
 </style>
