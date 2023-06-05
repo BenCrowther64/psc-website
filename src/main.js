@@ -12,5 +12,19 @@ router.beforeEach((to, from, next) => {
     next();
   });
 
-const app = createApp(App)
+const clickOutside = {
+  beforeMount: (el, binding) => {
+    el.clickOutsideEvent = event => {
+      if (!(el == event.target || el.contains(event.target))) {
+        binding.value();
+      }
+    };
+    document.addEventListener("mouseup", el.clickOutsideEvent);
+  },
+  unmounted: el => {
+    document.removeEventListener("mouseup", el.clickOutsideEvent);
+  },
+};
+
+const app = createApp(App).directive("click-outside", clickOutside)
 app.use(router).mount('#app')

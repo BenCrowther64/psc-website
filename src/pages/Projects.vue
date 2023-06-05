@@ -5,7 +5,11 @@ import ProjectType from '../components/Projects/ProjectType.vue';
 
 import PartyWallImage from '../assets/images/services/building-surveying/party-wall/banner.jpg';
 import DilapidationsImage from '../assets/images/projects/dilapidations/image2.jpg';
-import BuildingSurveyingImage from '../assets/images/projects/building-surveying/image4.jpg'
+import BuildingSurveyingImage from '../assets/images/projects/building-surveying/image5.jpg'
+import EmployersAgentImage from '../assets/images/projects/employers-agent/image5.jpg';
+import QuantitySurveyingImage from '../assets/images/projects/quantity-surveying/image5.jpg';
+import ReinValImage from '../assets/images/projects/rein-val/image5.jpg';
+
 
 export default {
   components: {
@@ -18,7 +22,10 @@ export default {
     return {
       PartyWallImage,
       DilapidationsImage,
-      BuildingSurveyingImage
+      BuildingSurveyingImage,
+      EmployersAgentImage,
+      QuantitySurveyingImage,
+      ReinValImage,
     }
   },
 }
@@ -34,9 +41,10 @@ export default {
       <ProjectType projectType="PARTY WALL" :image="PartyWallImage" projectUrl = "Party-Wall"/>
       <ProjectType projectType="DILAPIDATIONS" :image="DilapidationsImage" projectUrl = "Dilapidations"/>
       <ProjectType projectType="BUILDING SURVEYING" :image="BuildingSurveyingImage" projectUrl = "Building-Surveying"/>
-      <ProjectType projectType="PRINCIPAL DESIGNER" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType projectType="PROJECT MANAGEMENT" :image="PartyWallImage" projectUrl = "Party-Wall"/>
-      <ProjectType projectType="QUANTITY SURVEYING" :image="PartyWallImage" projectUrl = "Party-Wall"/>
+      <ProjectType projectType="QUANTITY SURVEYING" :image="QuantitySurveyingImage" projectUrl = "Quantity-Surveying"/>
+      <ProjectType projectType="EMPLOYERS AGENT" :image="EmployersAgentImage" projectUrl = "Employers-Agent"/>
+      <ProjectType projectType="REINSTATEMENT VALUATIONS" :image="ReinValImage" projectUrl = "Reinstatement-Valuation"/>
+
     </div>
 
     <Footer></Footer>

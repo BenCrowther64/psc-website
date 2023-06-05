@@ -22,6 +22,11 @@ const PartyWallProjects = () => import('./Projects/PartyWall.vue');
 const DilapidationProjects = () => import('./Projects/Dilapidations.vue')
 const BuildingSurveyingProjects = () => import('./Projects/BuildingSurveying.vue')
 
+//Quantity Surveying Projects
+const QuantitySurveyingProjects = () => import('./Projects/QuantitySurveying.vue')
+const EmployersAgentProjects = () => import('./Projects/EmployersAgent.vue')
+const ReinValProjects = () => import('./Projects/ReinVal.vue')
+
 //Front Page Full Page Project
 const FullPageProject = () => import('./Projects/FullPageProject.vue');
 
@@ -108,6 +113,24 @@ const routes = [
     path: '/Projects/Building-Surveying/',
     component: BuildingSurveyingProjects,
     meta: { title: 'Building Surveying Projects - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Projects/Employers-Agent/',
+    component: EmployersAgentProjects,
+    meta: { title: 'Employers Agent Projects - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Projects/Quantity-Surveying/',
+    component: QuantitySurveyingProjects,
+    meta: { title: 'Quantity Surveying Projects - PSC Surveying Ltd.' },
+  },
+
+  {
+    path: '/Projects/Reinstatement-Valuation/',
+    component: ReinValProjects,
+    meta: { title: 'Reinstatement Valuation Projects - PSC Surveying Ltd.' },
   },
 
   {

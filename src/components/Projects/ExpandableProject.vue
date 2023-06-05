@@ -31,7 +31,7 @@
 
             document.documentElement.style.overflow = 'auto'
             }
-        }
+        },
     }
 </script>
 
@@ -46,7 +46,7 @@
 
     <Transition name="nested" :duration="550">
         <div v-if="expanded" class="full-project-container">
-            <div class = "content-wrapper">
+            <div v-click-outside="expand" class = "content-wrapper">
                 <img :src="image">
                 <div class="full-text-container">
                     <h1>{{ projectName }}</h1>
