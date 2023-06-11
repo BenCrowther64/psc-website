@@ -9,6 +9,10 @@ import RecentProjectContainer from '../components/Home/RecentProjectContainer.vu
 import SlideShow1 from '../assets/images/home/img1.jpg';
 import SlideShow2 from '../assets/images/home/img2.jpg';
 import SlideShow3 from '../assets/images/home/img3.jpg';
+import SlideShow4 from '../assets/images/home/img4.jpg';
+import SlideShow5 from '../assets/images/home/img5.jpg';
+import SlideShow6 from '../assets/images/home/img6.jpg';
+import SlideShow7 from '../assets/images/home/img7.jpg';
 
 import OfferingImage1 from '../assets/images/home/offering1.jpg';
 import QuantitySurveyImage from '../assets/images/home/offering1.jpg';
@@ -19,7 +23,7 @@ import PrincipalDesignerImage from '../assets/images/home/offering3.jpg';
 export default {
   data() {
     return {
-      Slides: [SlideShow1, SlideShow2, SlideShow3],
+      Slides: [SlideShow1, SlideShow2, SlideShow3, SlideShow4, SlideShow5, SlideShow6, SlideShow7],
       OfferingImage1,
       QuantitySurveyImage,
       ProjectManagerImage,
